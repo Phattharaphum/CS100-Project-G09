@@ -46,8 +46,9 @@ div.mhead {
     margin: 0 0 2em 2em;
 	transform: scale(1);
 	position: fixed;
-	margin-left: 2em;
+	margin-left: 1em;
 	margin-top: 0em;
+	flex-direction: column;
 	
 }
 div.nev1 {
@@ -66,6 +67,7 @@ a.nev2 {
 	background-color: #B24338;
 	border-radius: 10px;
 	padding: 6px 25px 6px 25px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 div.s1head {
     display:inline-flex;
@@ -98,6 +100,8 @@ p.cstu {
     margin: 0;
     background-color: #5B4092;
     border-radius: 20px;
+	text-align: center;
+	padding: 5px;
 }
 p.passp {
     text-orientation: upright;
@@ -113,9 +117,10 @@ p.passp {
     color: white;
     margin-right: 4em;
     font-size: 20pt;
-	background-color: #B24338;
+	background-color: #F87862;
 	border-radius: 10px;
 	padding: 6px 25px 6px 25px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .lev5 {
@@ -187,6 +192,8 @@ p.passp {
 	width: 800px;
 	display: flex;
 	flex-direction: column;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	border-radius: 30px;
 }
 
 #tname01 {
@@ -212,12 +219,56 @@ p.passp {
 	height: 300px;
 	width: 220px;
 	border-radius: 20px;
+	margin-left: 50px;
+	margin-top: 70px;
 }
 
 .info {
 		background-color: #5B4193;
-	height: 500px;
-	width: 520px;
-	border-radius: 20px;
+	height: 450px;
+	width: 450px;
+	border-radius: 25px;
 	margin-left: 50px;
+	margin-bottom: 30px;
+}
+
+.ptes1 {
+	display: flex;
+}
+
+.grops {
+	font-family: Poppins;
+	color: white;
+	font-size: 18pt;
+	text-align: center;
+	margin: auto;
+}
+
+.gop1 {
+	background-color: #BC473B;
+	margin-top:10px;
+	padding: 10px;
+	border-radius: 20px;
+}
+
+a.nev2:hover {
+	background-color: #9B342F;
+}
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+a.nev3:hover {
+	background-color: #9B342F;
+}
+
+.freespa {
+	height: 200px;
 }
