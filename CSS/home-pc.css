@@ -1,0 +1,19 @@
+
+body {
+	background-image:url("cssMedia/Bg01.jpg");
+	width: 100%;
+	height: 100%;
+	margin-top: 0;
+	background-size:cover;
+	background-attachment:fixed;
+}
+
+.lev1 {
+
+}
+
+.lev2 {
+	background-color: red;
+	margin: auto;
+	max-width:1200px;
+}
