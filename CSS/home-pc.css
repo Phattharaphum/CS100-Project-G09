@@ -132,24 +132,26 @@ p.passp {
 	display: inline-flex;
 	flex-direction: column;
 	padding: 0px;
-	height: 530px;
-	width: 900px;
-	box-shadow: -5px 5px 60px 1px #0E0E0E
+	height: 450px;
+	width: 800px;
+	border-radius: 50px;
+	/*box-shadow: -5px 5px 60px 1px #0E0E0E*/
 	
 }
 
 #our {
-	font-size: 80pt;
+	font-size: 60pt;
 	line-height: 1;
 	margin-top: 0px;
 	padding: 18px;
 	text-align: center;
 	background-color: #412E6C;
 	color: #F87862;
+	border-radius: 50px;
 }
 
 #cstu2 {
-	font-size: 180pt;
+	font-size: 150pt;
 	margin: 30px;
 	line-height: 0;
 	text-align: center;
@@ -157,11 +159,12 @@ p.passp {
 }
 
 #pasp2 {
-	font-size: 80pt;
+	font-size: 60pt;
 	line-height: 1;
 	margin-top: 80px;
 	padding: 18px;
 	text-align: center;
 	background-color: #F66E58;
 	color: #412E6C;
+	border-radius: 50px;
 	}
