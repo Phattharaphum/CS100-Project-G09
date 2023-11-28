@@ -13,6 +13,13 @@
       <h1>Our Activity</h1>
       <!-- Main Form -->
       <form id="myForm" action="#" method="post">
+        <select name="nameTitle" id="nameTitle">
+          <option value="" disabled selected>Select an option</option>
+          <option value="Mr" class="ts">Mr.</option>
+          <option value="Ms." class="ts">Ms.</option>
+          <option value="Mrs." class="ts">Mrs.</option>
+        </select>
+        <p id="nameTitleError"></p>
         <!-- Firstname and Lastname Field -->
         <div class="form-group">
           <label for="fullname">Firstname and Lastname</label>

@@ -1,11 +1,5 @@
-/*
-  File: script.js
-  Author: CS100 Team
-  Date Created: 23 July 2023
-  Copyright: CSTU
-  Description: JS code of CSTU Passport that validate with JS
-*/
 // Function to validate Firstname and Lastname
+let Myears;
 function validateName() {
   const fullnameInput = document.getElementById("fullname");
   const names = fullnameInput.value.trim().split(" ");
@@ -13,11 +7,9 @@ function validateName() {
 
   if (names.length !== 2) {
     errorElement.textContent = "Please enter both your Firstname and Lastname.";
-    document.getElementById("fullname").innerHTML = "";
     return false;
   } else {
     errorElement.textContent = ""; // Clear the error message when valid
-    document.getElementById("fullname").innerHTML = fullnameInput.value;
   }
   return true;
   
@@ -73,7 +65,9 @@ async function submitForm(event) {
     alert("End datetime should be after the start datetime.");
     return;
   }
+  
 
+  
   // Create the data object to send to the backend
   const formData = new FormData(event.target);
   const data = {
@@ -104,5 +98,3 @@ document
   .getElementById("studentID")
   .addEventListener("input", validateStudentID);
 document.getElementById("email").addEventListener("input", validateEmail);
-
-
