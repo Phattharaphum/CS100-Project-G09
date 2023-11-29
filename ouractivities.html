@@ -41,13 +41,6 @@
       <h1 class="headssds">Our Activity</h1>
       <!-- Main Form -->
       <form id="myForm" action="#" method="post">
-        <!--<select name="nameTitle" id="nameTitle">
-          <option value="" disabled selected>Select an option</option>
-          <option value="Mr" class="ts">Mr.</option>
-          <option value="Ms." class="ts">Ms.</option>
-          <option value="Mrs." class="ts">Mrs.</option>
-        </select>
-        <p id="nameTitleError"></p>-->
 		
         <!-- Firstname and Lastname Field -->
         <div class="form-group">
@@ -176,22 +169,6 @@
     </div>
 	<div class="recoded">
 		<h1 class="headssds">Activity Record</h1>
-		<!--<div class="TestRec01">
-			<p class="rechead">Activity Title</p>
-		<p class=""> <b>Name : </b>Phattharaphum</p>
-		<p class=""> <b>LastName :</b> Kingchai</p>
-		<p class=""> Student ID : 6609612160</p>
-		<p class=""> Email : test.asd@dome.tu.ac.th</p>
-			<br>
-			<p class=""> Activity Title : Test</p>
-		<p class=""> Activity Type : Test</p>
-			<p class=""> Academic Year : 2566</p>
-			<p class=""> Semeter : 2</p>
-			<p class=""> Start date and time : 2</p>
-			<p class=""> End date and time : 2</p>
-			<p class=""> Location : test</p>
-			<p class=""> Description : test</p>
-		</div>-->
 	<div id="outputContainer">
     </div>
 		</div>
@@ -241,25 +218,18 @@
           }
       }
       function showConfirm() {
-      // Display the overlay and modal
       document.getElementById("overlay").style.display = "block";
       document.getElementById("confirmModal").style.display = "block";
   }
   function confirmAction() {
-      // Handle the confirmed action
-      // Hide the overlay and modal
 	  Output();
       hideConfirm();
 	  clearForm();
   }
   function cancelAction() {
-      // Handle the canceled action
-      //alert("You clicked No! Action canceled.");
-      // Hide the overlay and modal
       hideConfirm();
   }
   function hideConfirm() {
-      // Hide the overlay and modal
       document.getElementById("overlay").style.display = "none";
       document.getElementById("confirmModal").style.display = "none";
   }
