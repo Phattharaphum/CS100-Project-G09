@@ -465,3 +465,38 @@ a.nev3:hover {
 	margin-left: 0;
 	border-radius: 15px;
 }
+
+.form-group02 {
+	    margin: 20px;
+	padding: 20px;
+	 border-radius: 15px;
+	display: inline-flex;
+	margin: auto;
+	flex-direction: column;
+	/*box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;*/
+}
+  .form-group02 input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+	  font-family: Poppins;
+	  font-size: 20pt;
+	  font-weight: 600;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	 margin-left: 250px;
+	  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  }
+  .form-group02 button[type="button"] {
+    background-color: #9B342F;
+    color: white;
+	font-family: Poppins;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	  margin-top: 10px;
+	  margin-left: 250px;
+	  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  }
