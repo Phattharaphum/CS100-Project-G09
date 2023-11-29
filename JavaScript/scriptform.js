@@ -176,13 +176,25 @@ function Output(){
     descriptionCheck();
     nameTitleCheck();
   }
+  function showConfirmation() {
+    // Display a confirmation dialog and store the result
+    const userConfirmed = window.confirm("Do you want to proceed?");
+
+    // Check the user's choice
+    if (userConfirmed) {
+        alert("You clicked OK! Proceeding...");
+    } else {
+        alert("You clicked Cancel! Action canceled.");
+    }
+}  
 async function submitForm(event) {
   event.preventDefault();
 
-  // Validate form inputs before submission
-  if (!validateName() || !validateStudentID() || !validateEmail()) {
-    return;
-  }
+    // Validate form inputs before submission
+    if (!validateName() || !validateStudentID() || !validateEmail() || !TitleCheck() || !ActivityCheck() || !AcademicYearCheck() ||
+!semesterCheck() || !startDateCheck() || !endDateCheck()|| !locationCheck()|| !descriptionCheck()||!nameTitleCheck) {
+      return;
+    }
   const startDateInput = document.getElementById("startDate").value;
   const endDateInput = document.getElementById("endDate").value;
   const startDate = new Date(startDateInput);
@@ -193,35 +205,28 @@ async function submitForm(event) {
     return;
   }
   
-
-  
-  // Create the data object to send to the backend
-  const formData = new FormData(event.target);
-  const data = {
-    first_name: formData.get("fullname").split(" ")[0],
-    last_name: formData.get("fullname").split(" ")[1],
-    student_id: parseInt(formData.get("studentID")),
-    email: formData.get("email"),
-    title: formData.get("workTitle"),
-    type_of_work_id: parseInt(formData.get("activityType")),
-    academic_year: parseInt(formData.get("academicYear")) - 543,
-    semester: parseInt(formData.get("semester")),
-    start_date: formData.get("startDate"),
-    end_date: formData.get("endDate"),
-    location: formData.get("location"),
-    description: formData.get("description")
-  };
-
-  console.log(data);
-  alert(JSON.stringify(data));
+    //console.log(data);
+    //alert(JSON.stringify(data));
+    const fullnameInput = document.getElementById("fullname");
+    document.getElementById("nameOutput").innerHTML = "Name: " + fullnameInput.value;
+    Output();
+    showConfirmation();
+    clearForm();
 } 
 
-// Event listener for form submission
-document.getElementById("myForm").addEventListener("submit", submitForm);
-
-// Event listeners for input validation on user input
-document.getElementById("fullname").addEventListener("input", validateName);
-document
-  .getElementById("studentID")
-  .addEventListener("input", validateStudentID);
-document.getElementById("email").addEventListener("input", validateEmail);
+  // Event listener for form submission
+  document.getElementById("myForm").addEventListener("submit", submitForm);
+  
+  // Event listeners for input validation on user input
+  document.getElementById("fullname").addEventListener("input", validateName);
+  document.getElementById("studentID").addEventListener("input", validateStudentID);
+  document.getElementById("email").addEventListener("input", validateEmail);
+  document.getElementById("workTitle").addEventListener("input", TitleCheck);
+  document.getElementById("activityType").addEventListener("input", ActivityCheck);
+  document.getElementById("academicYear").addEventListener("input", AcademicYearCheck);
+  document.getElementById("semester").addEventListener("input", semesterCheck);
+  document.getElementById("startDate").addEventListener("input", startDateCheck);
+  document.getElementById("endDate").addEventListener("input", endDateCheck);
+  document.getElementById("location").addEventListener("input", locationCheck);
+  document.getElementById("description").addEventListener("input", descriptionCheck);
+  document.getElementById("nameTitle").addEventListener("input", nameTitleCheck);
