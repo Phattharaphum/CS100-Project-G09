@@ -6,55 +6,82 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Our Activities</title>
     <link rel="stylesheet" href="CSS/activity.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
 </head>
 <body>
+	<div class="lev1">
+	<div class="lev2">
+	<div class="lev3">
+	<div class="tophead">
+            <div class="mhead">
+				<div class="ptes1">
+                <div class="s1head">
+                  <p class="my">Our</p>
+                  <p class="cstu">CSTU</p>
+               </div>
+               <div class="s2head">
+                  <p class="passp">passport</p>
+               </div>
+					</div>
+				<div class="gop1">
+					<p class="grops">Group 09</p>
+				</div>
+            </div>
+            <div class="nev1">
+                <a class="nev2" href="">Home</a>
+                <a class="nev3" href="">Activities</a>
+            </div>
+    </div>
+	</div>
     <!-- Form Container -->
     <div class="form-container">
-      <h1>Our Activity</h1>
+      <h1 class="headssds">Our Activity</h1>
       <!-- Main Form -->
       <form id="myForm" action="#" method="post">
-        <select name="nameTitle" id="nameTitle">
+        <!--<select name="nameTitle" id="nameTitle">
           <option value="" disabled selected>Select an option</option>
           <option value="Mr" class="ts">Mr.</option>
           <option value="Ms." class="ts">Ms.</option>
           <option value="Mrs." class="ts">Mrs.</option>
         </select>
-        <p id="nameTitleError"></p>
+        <p id="nameTitleError"></p>-->
+		
         <!-- Firstname and Lastname Field -->
         <div class="form-group">
-          <label for="fullname">Firstname and Lastname</label>
+          <label for="fullname" class="topivde">Firstname and Lastname</label>
           <input type="text" id="fullname" name="fullname" />
           <small>Only enter your first name and last name, middle name is not necessary.</small>
           <span id="fullnameError" class="error"></span>
-        </div>
+        
         
         <!-- Student ID Field -->
         <div class="form-group">
-          <label for="studentID">Student ID</label>
+          <label for="studentID" class="topivde2">Student ID</label>
           <input type="text" id="studentID" name="studentID" />
           <small>Please enter your 10-digit student ID.</small>
           <span id="studentIDError" class="error"></span>
-        </div>
-        <div>
+		<div><p id="yeyydas"> Your School Year is
           <span id="Myear"></span>
+        </p></div>
         </div>
         <!-- University Email Field -->
         <div class="form-group">
-          <label for="email">University Email</label>
+          <label for="email" class="topivde3">University Email</label>
           <input type="email" id="email" name="email" />
           <small>Please provide your university email in the format "xxx.yyy@dome.tu.ac.th".</small>
           <span id="emailError" class="error"></span>
-        </div>
+        </div></div>
   
         <!-- Work/Activity Title Field -->
         <div class="form-group">
-          <label for="workTitle">Work/Activity Title</label>
+          <label for="workTitle" class="topivde">Work/Activity Title</label>
           <input type="text" id="workTitle" name="workTitle" />
-        </div>
+        
         <div><p id="workTitleerror"></p></div>
   
         <div class="form-group">
-          <label for="activityType">Type of Work/Activity</label>
+          <label for="activityType" class="topivde">Type of Work/Activity</label>
           <select id="activityType" name="activityType">
             <option value="" disabled selected>Select an option</option>
             <option value="Course">Course</option>
@@ -65,12 +92,16 @@
             <option value="Competition">Competition</option>
             <option value="Computer Science">Computer Science</option>
           </select>
-        </div>
+        
         <div><p id="activityTypeerror"></p></div> 
+		</div></div>
   
         <!-- Academic Year Field -->
         <div class="form-group">
-          <label for="academicYear">Academic Year</label>
+			
+		<p class="topivdeTnL">Time and Location</p>
+			<div class="form-group">
+          <label for="academicYear" class="topivde6">Academic Year</label>
           <select id="academicYear" name="academicYear">
             <option value="" disabled selected>Select an option</option>
             <option value="2561">2561</option>
@@ -83,11 +114,11 @@
             <option value="2568">2568</option>
             <option value="2569">2569</option>
           </select>
-        </div>
-        <div><p id="academicYearerror"></p></div> 
+        
+				<div><p id="academicYearerror"></p></div> </div> 
         <!-- Semester Field -->
         <div class="form-group">
-          <label for="semester">Semester</label>
+          <label for="semester" class="topivde7">Semester</label>
           <select id="semester" name="semester">
             <option value="" disabled selected>Select an option</option>
             <option value="1">1</option>
@@ -98,22 +129,20 @@
         <div><p id="semestererror"></p></div>  
         <!-- Start Date/Time Field -->
         <div class="form-group">
-          <label for="startDate">Start Date/Time</label>
+          <label for="startDate" class="topivde8">Start Date/Time</label>
           <input type="datetime-local" id="startDate" name="startDate" />
-        </div>
+        
         <div><p id="startDateerror"></p></div>  
         <!-- End Date/Time Field -->
-        <div class="form-group">
-          <label for="endDate">End Date/Time</label>
+          <label for="endDate" class="topivde9">End Date/Time</label>
           <input type="datetime-local" id="endDate" name="endDate" />
-        </div>
-        <div><p id="endDateerror"></p></div> 
+        <div><p id="endDateerror"></p></div> </div>
         <!-- Location Field -->
         <div class="form-group">
-          <label for="location">Location</label>
+          <label for="location" class="topivde10">Location</label>
           <input type="text" id="location" name="location" />
         </div>
-        <div><p id="locationerror"></p></div> 
+        <div><p id="locationerror"></p></div> </div> 
         <!-- Description Field -->
         <div class="form-group">
           <label for="description">Description</label>
@@ -143,8 +172,13 @@
       <button onclick="confirmAction()">Yes</button>
       <button onclick="cancelAction()">No</button>
     </div>
-
-
+	</div>
+	</div>
+		
+		
+		
+		
+		
     <!-- JavaScript -->
     <script src="JavaScript/scriptform.js"></script>
     <script>

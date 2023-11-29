@@ -26,12 +26,12 @@ function validateStudentID() {
   console.log(C);
   Myears = Math.floor(C);
   console.log(Myears);
-  document.getElementById("Myear").innerHTML="25"+Myears;
   if (!studentIDPattern.test(studentIDInput.value)) {
     errorElement.textContent = "Please enter a 10-digit Student ID.";
     return false;
   } else {
     errorElement.textContent = ""; // Clear the error message when valid
+    document.getElementById("Myear").innerHTML="25"+Myears;
   }
   return true;
 }
@@ -143,7 +143,7 @@ function descriptionCheck(){
   }
   return true;
 } 
-function nameTitleCheck(){
+/*function nameTitleCheck(){
   const Input = document.getElementById("nameTitle");
   const errorElement = document.getElementById("nameTitleError");
   if (Input.value == "") {
@@ -153,14 +153,15 @@ function nameTitleCheck(){
       errorElement.innerHTML = "";
   }
   return true;
-} 
+} */
 function Output(){
-
   const Name = document.createElement("p");
   const fullnameInput = document.getElementById("fullname").value;
   Name.textContent = fullnameInput;
+  Name.className= "teee";
   document.getElementById("outputContainer").appendChild(Name);
 }
+
   // Function to validate form inputs on user input
   function validateFormOnInput() {
     validateName();
@@ -174,7 +175,6 @@ function Output(){
     endDateCheck();
     locationCheck();
     descriptionCheck();
-    nameTitleCheck();
   }
   function showConfirmation() {
     // Display a confirmation dialog and store the result
@@ -192,7 +192,7 @@ async function submitForm(event) {
 
     // Validate form inputs before submission
     if (!validateName() || !validateStudentID() || !validateEmail() || !TitleCheck() || !ActivityCheck() || !AcademicYearCheck() ||
-!semesterCheck() || !startDateCheck() || !endDateCheck()|| !locationCheck()|| !descriptionCheck()||!nameTitleCheck) {
+!semesterCheck() || !startDateCheck() || !endDateCheck()|| !locationCheck()|| !descriptionCheck()) {
       return;
     }
   const startDateInput = document.getElementById("startDate").value;
@@ -229,4 +229,4 @@ async function submitForm(event) {
   document.getElementById("endDate").addEventListener("input", endDateCheck);
   document.getElementById("location").addEventListener("input", locationCheck);
   document.getElementById("description").addEventListener("input", descriptionCheck);
-  document.getElementById("nameTitle").addEventListener("input", nameTitleCheck);
+  //document.getElementById("nameTitle").addEventListener("input", nameTitleCheck);

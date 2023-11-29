@@ -1,23 +1,36 @@
-/*
-  File: styles.css
-  Author: CS100 Team
-  Date Created: 23 July 2023
-  Copyright: CSTU
-  Description: CSS code of CSTU Passport that validate with JS
-*/
-
-/* Set the font family for the entire body */
 body {
     font-family: Arial, sans-serif;
   }
-  
+
+ body {
+	background-image:url("cssMedia/Bg01.jpg");
+	width: 100%;
+	height: 100%;
+	margin-top: 0;
+	background-size:cover;
+	background-attachment:fixed;
+	margin: auto;
+}
   /* Styling for the form container */
   .form-container {
-    max-width: 600px;
+	    margin: auto;
+  max-width:1200px;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: #fff;
+  height: 100%;
+  background-image: url("cssMedia/Bg01Br.jpg");
+background-size:cover;
+background-attachment:fixed;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	display: flex;
+	flex-direction: column;
+	  
+	  
+	  
+    max-width: 700px;
     margin: 20px auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
   }
   
   /* Center-align the heading and add margin at the bottom */
@@ -28,7 +41,10 @@ body {
   
   /* Styling for each form group */
   .form-group {
-    margin-bottom: 20px;
+    margin: 20px;
+	padding: 20px;
+	 border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   
   /* Styling for form group labels */
@@ -48,6 +64,9 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+	 font-family: Poppins;
+	  font-size: 12pt;
+	  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   }
   
   /* Allow vertical resizing for textareas */
@@ -118,4 +137,310 @@ body {
     padding: 10px;
     cursor: pointer;
 }
-  
+.teee{
+  color: #4caf50;
+}
+.lev3 {
+	display: inline-flex;
+	flex-direction: column;
+	width: 100%;
+}
+div.tophead {
+    display: flex;
+	height: 300px;
+}
+div.mhead {
+    background-color: #1A1135;
+    display:inline-flex;
+    padding: 15px;
+    border-radius: 0 0 2em 2em;
+    margin: 0 0 2em 2em;
+	transform: scale(1);
+	position: fixed;
+	margin-left: 1em;
+	margin-top: 0em;
+	flex-direction: column;
+	
+}
+div.nev1 {
+    color:white ;
+    align-self: baseline;
+    margin-left: 40em;
+    margin-top: 4em;
+	flex-direction: row;
+	font-weight: 600;
+}
+a.nev2 {
+    font-family:Poppins ;
+    color: white;
+    margin-right: 4em;
+    font-size: 20pt;
+	background-color: #F87862;
+	border-radius: 10px;
+	padding: 6px 25px 6px 25px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+div.s1head {
+    display:inline-flex;
+    flex-direction: column;
+    margin: auto;
+}
+div.s2head {
+    display:inline-flex;
+    flex-direction: column;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+p.my {
+    font-family: Poppins;
+    font-size: 25pt;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    margin: auto ;
+	background-color: #1A1135;
+	margin-top: 10px;
+}
+p.cstu {
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+    font-family: Poppins;
+    font-size: 30pt;
+    color: white;
+    font-weight: 600;
+    margin: 0;
+    background-color: #5B4092;
+    border-radius: 20px;
+	text-align: center;
+	padding: 5px;
+}
+p.passp {
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+    font-family: Poppins;
+    font-size: 18pt;
+    color: white;
+    font-weight: 600;
+    margin: auto;
+}
+.nev3 {
+	font-family:Poppins ;
+    color: white;
+    margin-right: 4em;
+    font-size: 20pt;
+	background-color: #B24338;
+	border-radius: 10px;
+	padding: 6px 25px 6px 25px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.lev2 {
+  margin: auto;
+  max-width:1200px;
+}
+.lev3 {
+	display: inline-flex;
+	flex-direction: column;
+	width: 100%;
+}
+.gop1 {
+	background-color: #BC473B;
+	margin-top:10px;
+	padding: 10px;
+	border-radius: 20px;
+}
+.grops {
+	font-family: Poppins;
+	color: white;
+	font-size: 18pt;
+	text-align: center;
+	margin: auto;
+}
+.ptes1 {
+	display: flex;
+}
+a.nev2:hover {
+	background-color: #9B342F;
+}
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+a.nev3:hover {
+	background-color: #9B342F;
+}
+
+.headssds {
+	font-family: Poppins;
+	font-size: 40pt;
+	text-align: center;
+	margin: 0;
+	font-weight: 900;
+	color: white;
+}
+
+.topivde {
+	font-family: Poppins;
+	font-size: 20pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 600;
+	color: #F87862;
+	width: 60%;
+	background-color: white;
+	padding: 10px;
+	margin: 15px;
+	margin-left: 0;
+	border-radius: 15px;
+}
+
+#Myear {
+	background-color: #F87862;
+	padding: 2px;
+	color: white;
+}
+
+#yeyydas {
+	background-color: white;
+	width: 220px;
+	font-family: Poppins;
+	padding: 10px;
+	border-radius: 10px;
+	margin-left: 20px;
+}
+
+.topivde2 {
+	font-family: Poppins;
+	font-size: 20pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 600;
+	color: #F87862;
+	width: 24%;
+	background-color: white;
+	padding: 10px;
+	margin: 15px;
+	margin-left: 0;
+	border-radius: 15px;
+}
+
+.topivde3 {
+	font-family: Poppins;
+	font-size: 20pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 600;
+	color: #F87862;
+	width: 38%;
+	background-color: white;
+	padding: 10px;
+	margin: 15px;
+	margin-left: 0;
+	border-radius: 15px;
+}
+
+.topivdeTnL {
+		font-family: Poppins;
+	font-size: 20pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 900;
+	color: #F87862;
+	width: 90%;
+	background-color: white;
+	padding: 10px;
+	margin: 15px;
+	margin-left: 0;
+	border-radius: 15px;
+}
+
+.topivde6 {
+	font-family: Poppins;
+	font-size: 15pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 600;
+	color: #1A1135;
+	background-color: white;
+	width: 30%;
+	padding: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 10px;
+	margin-left: 0;
+	border-radius: 5px;
+}
+
+.topivde7 {
+		font-family: Poppins;
+	font-size: 15pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 600;
+	color: #1A1135;
+	background-color: white;
+	width: 20%;
+	padding: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 10px;
+	margin-left: 0;
+	border-radius: 5px;
+}
+
+.topivde8 {
+			font-family: Poppins;
+	font-size: 15pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 600;
+	color: #1A1135;
+	background-color: white;
+	width: 32%;
+	padding: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 10px;
+	margin-left: 0;
+	border-radius: 5px;
+}
+
+.topivde9 {
+				font-family: Poppins;
+	font-size: 15pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 600;
+	color: #1A1135;
+	background-color: white;
+	width: 32%;
+	padding: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 10px;
+	margin-left: 0;
+	border-radius: 5px;
+}
+
+.topivde10 {
+			font-family: Poppins;
+	font-size: 15pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 600;
+	color: #1A1135;
+	background-color: white;
+	width: 17%;
+	padding: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 10px;
+	margin-left: 0;
+	border-radius: 5px;
+}
