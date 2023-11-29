@@ -1,4 +1,5 @@
-
+@media screen and (min-width: 1200px)
+{
 body {
 	background-image:url("cssMedia/Bg01.jpg");
 	width: 100%;
@@ -477,4 +478,5 @@ background-color: #AF5151;
 	font-weight: 900;
 	background-color: white;
 	border-radius: 20px;
+}
 }

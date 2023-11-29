@@ -1,3 +1,5 @@
+@media screen and (min-width: 1200px)
+{
 body {
     font-family: Arial, sans-serif;
   }
@@ -658,4 +660,5 @@ b {
 	color: white;
 	width: 100px;
 	border-radius: 15px;
+}
 }
