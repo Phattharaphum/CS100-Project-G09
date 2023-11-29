@@ -94,38 +94,46 @@
             <option value="Summer">Summer</option>
           </select>
         </div>
-  
+        <div><p id="semestererror"></p></div>  
         <!-- Start Date/Time Field -->
         <div class="form-group">
           <label for="startDate">Start Date/Time</label>
           <input type="datetime-local" id="startDate" name="startDate" />
         </div>
-  
+        <div><p id="startDateerror"></p></div>  
         <!-- End Date/Time Field -->
         <div class="form-group">
           <label for="endDate">End Date/Time</label>
           <input type="datetime-local" id="endDate" name="endDate" />
         </div>
-  
+        <div><p id="endDateerror"></p></div> 
         <!-- Location Field -->
         <div class="form-group">
           <label for="location">Location</label>
           <input type="text" id="location" name="location" />
         </div>
-  
+        <div><p id="locationerror"></p></div> 
         <!-- Description Field -->
         <div class="form-group">
           <label for="description">Description</label>
           <textarea id="description" name="description" rows="4"></textarea>
         </div>
-  
+        <div><p id="descriptionerror"></p></div> 
         <!-- Submit Button -->
         <div class="form-group">
           <input type="submit" value="Submit" />
         </div>
+        <button type="button" onclick="clearForm()">Clear Form</button>
       </form>
-      <p id="fullname"></p>
     </div>
+    <div>
+      <p>TEstassdsd</p>
+      <p id="nameOutput"></p>
+    </div>
+    <div id="outputContainer">
+    </div>
+    <!-- Trigger button -->
+    <button onclick="showConfirm()">Show Confirm</button>
     <!-- JavaScript -->
     <script src="JavaScript/scriptform.js"></script>
   </body>
