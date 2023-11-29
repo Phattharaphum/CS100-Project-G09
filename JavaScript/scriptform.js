@@ -88,12 +88,94 @@ function AcademicYearCheck(){
   }
   return true;
 }
-// Function to validate form inputs on user input
-function validateFormOnInput() {
-  validateName();
-  validateStudentID();
-  validateEmail();
+function semesterCheck(){
+  const Input = document.getElementById("semester");
+  const errorElement = document.getElementById("semestererror");
+  if (Input.value == "") {
+      errorElement.innerHTML = "Required.";
+      return false;
+  } else {
+      errorElement.innerHTML = "";
+  }
+  return true;
 }
+function startDateCheck(){
+  const Input = document.getElementById("startDate");
+  const errorElement = document.getElementById("startDateerror");
+  if (Input.value == "") {
+      errorElement.innerHTML = "Required.";
+      return false;
+  } else {
+      errorElement.innerHTML = "";
+  }
+  return true;
+}
+function endDateCheck(){
+  const Input = document.getElementById("endDate");
+  const errorElement = document.getElementById("endDateerror");
+  if (Input.value == "") {
+      errorElement.innerHTML = "Required.";
+      return false;
+  } else {
+      errorElement.innerHTML = "";
+  }
+  return true;
+}
+function locationCheck(){
+  const Input = document.getElementById("location");
+  const errorElement = document.getElementById("locationerror");
+  if (Input.value == "") {
+      errorElement.innerHTML = "Required.";
+      return false;
+  } else {
+      errorElement.innerHTML = "";
+  }
+  return true;
+}
+function descriptionCheck(){
+  const Input = document.getElementById("description");
+  const errorElement = document.getElementById("descriptionerror");
+  if (Input.value == "") {
+      errorElement.innerHTML = "Required.";
+      return false;
+  } else {
+      errorElement.innerHTML = "";
+  }
+  return true;
+} 
+function nameTitleCheck(){
+  const Input = document.getElementById("nameTitle");
+  const errorElement = document.getElementById("nameTitleError");
+  if (Input.value == "") {
+      errorElement.innerHTML = "Required.";
+      return false;
+  } else {
+      errorElement.innerHTML = "";
+  }
+  return true;
+} 
+function Output(){
+
+  const Name = document.createElement("p");
+  const fullnameInput = document.getElementById("fullname").value;
+  Name.textContent = fullnameInput;
+  document.getElementById("outputContainer").appendChild(Name);
+}
+  // Function to validate form inputs on user input
+  function validateFormOnInput() {
+    validateName();
+    validateStudentID();
+    validateEmail();
+    TitleCheck();
+    ActivityCheck();
+    AcademicYearCheck();
+    semesterCheck();
+    startDateCheck();
+    endDateCheck();
+    locationCheck();
+    descriptionCheck();
+    nameTitleCheck();
+  }
 async function submitForm(event) {
   event.preventDefault();
 
