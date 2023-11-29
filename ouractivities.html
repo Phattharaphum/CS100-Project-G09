@@ -134,7 +134,50 @@
     </div>
     <!-- Trigger button -->
     <button onclick="showConfirm()">Show Confirm</button>
+    <!-- Overlay and Modal -->
+    <div id="overlay"></div>
+    <div id="confirmModal">
+      <p>Do you want to proceed?</p>
+      <button onclick="confirmAction()">Yes</button>
+      <button onclick="cancelAction()">No</button>
+    </div>
     <!-- JavaScript -->
     <script src="JavaScript/scriptform.js"></script>
+    <script>
+      function clearForm() {
+          // Get the form by its ID
+          const form = document.getElementById("myForm");
+          // Loop through all the form elements
+          for (const element of form.elements) {
+              // Check if the element is an input field
+              if (element.type !== "submit" && element.type !== "button") {
+                  // Clear the value of the input field
+                  element.value = "";
+              }
+          }
+      }
+      function showConfirm() {
+      // Display the overlay and modal
+      document.getElementById("overlay").style.display = "block";
+      document.getElementById("confirmModal").style.display = "block";
+  }
+  function confirmAction() {
+      // Handle the confirmed action
+      alert("You clicked Yes! Proceeding...");
+      // Hide the overlay and modal
+      hideConfirm();
+  }
+  function cancelAction() {
+      // Handle the canceled action
+      alert("You clicked No! Action canceled.");
+      // Hide the overlay and modal
+      hideConfirm();
+  }
+  function hideConfirm() {
+      // Hide the overlay and modal
+      document.getElementById("overlay").style.display = "none";
+      document.getElementById("confirmModal").style.display = "none";
+  }
+  </script>
   </body>
 </html>

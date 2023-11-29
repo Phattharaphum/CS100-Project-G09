@@ -19,7 +19,14 @@ function validateStudentID() {
   const studentIDInput = document.getElementById("studentID");
   const studentIDPattern = /^\d{10}$/;
   const errorElement = document.getElementById("studentIDError");
-
+  const B = document.getElementById("studentID").value;
+  const A = parseInt(B, 10);
+  let C = A/100000000;
+  console.log(A);
+  console.log(C);
+  Myears = Math.floor(C);
+  console.log(Myears);
+  document.getElementById("Myear").innerHTML="25"+Myears;
   if (!studentIDPattern.test(studentIDInput.value)) {
     errorElement.textContent = "Please enter a 10-digit Student ID.";
     return false;
@@ -31,7 +38,7 @@ function validateStudentID() {
 // Function to validate University Email
 function validateEmail() {
   const emailInput = document.getElementById("email");
-  const emailPattern = /^.+@dome\.tu\.ac\.th$/;
+  const emailPattern = /^[a-zA-Z]+\.[a-zA-Z]{3}@dome\.tu\.ac\.th$/;  
   const errorElement = document.getElementById("emailError");
 
   if (!emailPattern.test(emailInput.value)) {
@@ -40,6 +47,33 @@ function validateEmail() {
     return false;
   } else {
     errorElement.textContent = ""; // Clear the error message when valid
+  }
+  return true;
+}
+function TitleCheck(){
+  const Input = document.getElementById("workTitle");
+  const TitlePattern = /^[a-zA-Z]{3,}$/;
+  const errorElement = document.getElementById("workTitleerror");
+  if (Input.value == "") {
+      errorElement.innerHTML = "Required.";
+      return false;
+  } else if(!TitlePattern.test(Input.value)){
+      errorElement.innerHTML = "Title must have more than 2 letter";
+  }
+      else {
+      errorElement.innerHTML = "";
+  }
+  return true;
+}
+
+function ActivityCheck(){
+  const Input = document.getElementById("activityType");
+  const errorElement = document.getElementById("activityTypeerror");
+  if (Input.value == "") {
+      errorElement.innerHTML = "Required.";
+      return false;
+  } else {
+      errorElement.innerHTML = "";
   }
   return true;
 }
