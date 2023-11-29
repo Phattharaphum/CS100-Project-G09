@@ -283,6 +283,7 @@ a.nev3:hover {
 	margin: 0;
 	font-weight: 900;
 	color: white;
+	
 }
 
 .topivde {
@@ -500,3 +501,53 @@ a.nev3:hover {
 	  margin-left: 250px;
 	  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   }
+.recoded {
+	
+	    margin: auto;
+  max-width:1200px;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: #fff;
+  height: 100%;
+  background-image: url("cssMedia/Bg01Br.jpg");
+background-size:cover;
+background-attachment:fixed;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	display: flex;
+	flex-direction: column;
+	  
+	  
+	  
+    max-width: 700px;
+    margin: 20px auto;
+	margin-top:80px; 
+    padding: 20px;
+}
+
+.TestRec01 {
+	    margin: 20px;
+	padding: 20px;
+	 border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	font-family: Poppins;
+	font-size: 20pt;
+	color: white;
+	line-height: 15px;
+	background-color: rgba(43, 30, 85, 0.6);
+}
+
+.rechead {
+	font-size: 35pt;
+	text-align: center;
+	font-weight: 600;
+	background-color: #9B342F;
+	border-radius: 25px;
+	margin: auto;
+	line-height: 2em;
+}
+b {
+	font-weight: 600;
+	/*background-color: #2B1E52;
+	padding: 3px;
+	border-radius: 10px;*/
+}

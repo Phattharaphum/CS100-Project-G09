@@ -155,11 +155,61 @@ function descriptionCheck(){
   return true;
 } */
 function Output(){
+  const myDiv = document.createElement("div");
   const Name = document.createElement("p");
+  const Acti = document.createElement("p");
+  const ID = document.createElement("p");
+  const Email = document.createElement("p");
+  const Actyp = document.createElement("p");
+  const Acad = document.createElement("p");
+  const Semis = document.createElement("p");
+  const DataS = document.createElement("p");
+  const DateE = document.createElement("p");
+  const Loca = document.createElement("p");
+  const Des = document.createElement("p");
+
+
+
   const fullnameInput = document.getElementById("fullname").value;
-  Name.textContent = fullnameInput;
-  Name.className= "teee";
-  document.getElementById("outputContainer").appendChild(Name);
+  const ActiInput = document.getElementById("workTitle").value;
+  const IDInput = document.getElementById("studentID").value;
+  const EmailInput = document.getElementById("email").value;
+  const ActypInput = document.getElementById("activityType").value;
+  const AcadInput = document.getElementById("academicYear").value;
+  const SemisInput = document.getElementById("semester").value;
+  const DataSInput = document.getElementById("startDate").value;
+  const DateEInput = document.getElementById("endDate").value;
+  const LocaInput = document.getElementById("location").value;
+  const DesInput = document.getElementById("description").value;
+
+  Acti.textContent=ActiInput;
+  Acti.className="rechead";
+
+  Name.textContent = "Name :" + fullnameInput;
+  ID.textContent = "Student ID :" + IDInput;
+  Email.textContent = "Email :" + EmailInput;
+  Actyp.textContent = "Activity Type : " +ActypInput;
+  Acad.textContent = "Academic Year : " +AcadInput;
+  Semis.textContent = "Semeter :" +SemisInput;
+  DataS.textContent = "Start date and time : " +DataSInput;
+  DateE.textContent = "End date and time :" +DateEInput;
+  Loca.textContent = "Location :" +LocaInput;
+  Des.textContent = "Description : " +DesInput;
+
+
+  myDiv.className="TestRec01";
+  myDiv.appendChild(Acti);
+  myDiv.appendChild(Name);
+  myDiv.appendChild(ID);
+  myDiv.appendChild(Email);
+  myDiv.appendChild(Actyp);
+  myDiv.appendChild(Acad);
+  myDiv.appendChild(Semis);
+  myDiv.appendChild(DataS);
+  myDiv.appendChild(DateE);
+  myDiv.appendChild(Loca);
+  myDiv.appendChild(Des);
+  document.getElementById("outputContainer").appendChild(myDiv);
 }
 
   // Function to validate form inputs on user input
