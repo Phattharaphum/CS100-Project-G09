@@ -77,6 +77,17 @@ function ActivityCheck(){
   }
   return true;
 }
+function AcademicYearCheck(){
+  const Input = document.getElementById("academicYear");
+  const errorElement = document.getElementById("academicYearerror");
+  if (Input.value == "") {
+      errorElement.innerHTML = "Required.";
+      return false;
+  } else {
+      errorElement.innerHTML = "";
+  }
+  return true;
+}
 // Function to validate form inputs on user input
 function validateFormOnInput() {
   validateName();
