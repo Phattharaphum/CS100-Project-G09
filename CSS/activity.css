@@ -269,6 +269,8 @@ p.passp {
 	font-size: 18pt;
 	text-align: center;
 	margin: auto;
+	font-weight: 600;
+		
 }
 .ptes1 {
 	display: flex;
@@ -639,7 +641,7 @@ b {
   background: #fff;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 	border-radius: 20px;
 	display: flex;
 	flex-direction: column;

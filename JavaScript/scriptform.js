@@ -58,7 +58,7 @@ function validateEmail() {
 }
 function TitleCheck(){
   const Input = document.getElementById("workTitle");
-  const TitlePattern = /^[a-zA-Z]{3,}$/;
+  const TitlePattern = /^[a-zA-Z ]{3,}$/;
   const errorElement = document.getElementById("workTitleerror");
   if (Input.value == "") {
       errorElement.innerHTML = "Required.";

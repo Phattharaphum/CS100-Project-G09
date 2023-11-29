@@ -25,7 +25,7 @@ body {
   border-radius: 50px;
   padding: 10px;
   background-color: #fff;
-  height: 1300px;
+  height: 100%;
   background-image: url("cssMedia/Bg01Br.jpg");
 background-size:cover;
 background-attachment:fixed;
@@ -37,6 +37,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 div.tophead {
     display: flex;
 	height: 300px;
+	
 }
 div.mhead {
     background-color: #1A1135;
@@ -224,12 +225,16 @@ p.passp {
 }
 
 .info {
-		background-color: #5B4193;
+	background-color: #9B342F;
 	height: 450px;
 	width: 450px;
 	border-radius: 25px;
 	margin-left: 50px;
 	margin-bottom: 30px;
+	font-family: Poppins;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .ptes1 {
@@ -271,4 +276,207 @@ a.nev3:hover {
 
 .freespa {
 	height: 200px;
+}
+
+.imafef {
+	height: 300px;
+	border-radius: 20px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+    .slideshow-container {
+      max-width: 600px;
+      position: relative;
+      margin: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+    }
+
+    .slide {
+      display: none;
+      text-align: center;
+    }
+
+    .dot-container {
+      margin-top: -80px;
+		display: flex;
+		margin-left: 30px;
+    }
+
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+		margin-left: 30px;
+    }
+
+    .dot.active {
+      background-color: #717171;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: relative;
+      top: -25px;
+      width: auto;
+      padding: 8px;
+      color: #F87862;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      background-color: white;
+      display: inline-block;
+		margin-left: 30px;
+    }
+
+    .prev {
+      left: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .next {
+      right: 0;
+    }
+#tname02 {
+	font-family: Poppins;
+    font-size: 40pt;
+    color: #F87862;
+	text-align: center;
+	margin: 0;
+	padding: 10px;
+	font-weight: 900;
+	background-color: white;
+	border-radius: 20px;
+}
+
+
+.infopage01inff {
+		background-color: #5B4193;
+	height: 450px;
+	width: 450px;
+	border-radius: 25px;
+	margin-left: 50px;
+	margin-bottom: 30px;
+}
+.Topcisd {
+	font-size: 25pt;
+	font-weight: 900;
+	text-align: center;
+	color: #9B342F;
+	background-color:#FFFFFF;
+	padding: 10px;
+	border-radius: 15px;
+	width: 400px;
+	margin: 0;
+	margin-top: 15px;
+	
+}
+
+.Name {
+	margin-top: 40px;
+	font-size: 20pt;
+	margin-left: 10px;
+	color: white;
+	line-height: 1px;
+}
+
+.data01 {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	text-align: left;
+	height: 120px;
+}
+
+.spadname {
+background-color: #AF5151;
+	padding: 5px;
+	border-radius: 8px;
+}
+
+.sldjk01 {
+			background-color: #9B342F;
+	height: 450px;
+	width: 450px;
+	border-radius: 25px;
+	margin-left: 50px;
+	margin-bottom: 30px;
+	font-family: Poppins;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.info2 {
+		/*background-color: #9B342F;*/
+	height: 450px;
+	width: 450px;
+	border-radius: 25px;
+	margin-left: 0px;
+	margin-bottom: 30px;
+	font-family: Poppins;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.sldjk02 {
+				background-color: #1A1135;
+	height: 450px;
+	width: 450px;
+	border-radius: 25px;
+	margin-left: 50px;
+	margin-bottom: 30px;
+	font-family: Poppins;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Topcisd2 {
+	font-size: 25pt;
+	font-weight: 900;
+	text-align: center;
+	color: #1A1135;
+	background-color:#FFFFFF;
+	padding: 10px;
+	border-radius: 15px;
+	width: 400px;
+	margin: 0;
+	margin-top: 15px;
+}
+
+.spadname2 {
+	background-color: #55488C;
+	padding: 5px;
+	border-radius: 8px;
+}
+
+#tname03 {
+		font-family: Poppins;
+    font-size: 40pt;
+    color: #F87862;
+	text-align: center;
+	margin: 0;
+	padding: 10px;
+	font-weight: 900;
+	background-color: white;
+	border-radius: 20px;
+}
+
+#tname04 {
+		font-family: Poppins;
+    font-size: 40pt;
+    color: #F87862;
+	text-align: center;
+	margin: 0;
+	padding: 10px;
+	font-weight: 900;
+	background-color: white;
+	border-radius: 20px;
 }
