@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="CSS/activity.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="lev1">
@@ -49,6 +51,8 @@
 		
         <!-- Firstname and Lastname Field -->
         <div class="form-group">
+			<p class="topivdeTnL">Personal Information</p>
+			<div class="form-group">
           <label for="fullname" class="topivde">Firstname and Lastname</label>
           <input type="text" id="fullname" name="fullname" />
           <small>Only enter your first name and last name, middle name is not necessary.</small>
@@ -56,7 +60,7 @@
         
         
         <!-- Student ID Field -->
-        <div class="form-group">
+        
           <label for="studentID" class="topivde2">Student ID</label>
           <input type="text" id="studentID" name="studentID" />
           <small>Please enter your 10-digit student ID.</small>
@@ -75,10 +79,12 @@
   
         <!-- Work/Activity Title Field -->
         <div class="form-group">
+			<p class="topivdeTnL">Activity Details</p>
+			<div class="form-group">
           <label for="workTitle" class="topivde">Work/Activity Title</label>
           <input type="text" id="workTitle" name="workTitle" />
         
-        <div><p id="workTitleerror"></p></div>
+        <div><p id="workTitleerror"></p></div></div>
   
         <div class="form-group">
           <label for="activityType" class="topivde">Type of Work/Activity</label>
@@ -115,9 +121,8 @@
             <option value="2569">2569</option>
           </select>
         
-				<div><p id="academicYearerror"></p></div> </div> 
+				<div><p id="academicYearerror"></p></div> 
         <!-- Semester Field -->
-        <div class="form-group">
           <label for="semester" class="topivde7">Semester</label>
           <select id="semester" name="semester">
             <option value="" disabled selected>Select an option</option>
@@ -125,8 +130,7 @@
             <option value="2">2</option>
             <option value="Summer">Summer</option>
           </select>
-        </div>
-        <div><p id="semestererror"></p></div>  
+        <div><p id="semestererror"></p></div>  </div> 
         <!-- Start Date/Time Field -->
         <div class="form-group">
           <label for="startDate" class="topivde8">Start Date/Time</label>
@@ -145,10 +149,15 @@
         <div><p id="locationerror"></p></div> </div> 
         <!-- Description Field -->
         <div class="form-group">
-          <label for="description">Description</label>
+          <label for="description" class="sada">Description</label>
           <textarea id="description" name="description" rows="4"></textarea>
         </div>
         <div><p id="descriptionerror"></p></div> 
+		  
+		  
+		  
+		  
+		  
         <!-- Submit Button -->
         <div class="form-group">
           <input type="submit" value="Submit" />
