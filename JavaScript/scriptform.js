@@ -132,12 +132,22 @@ function endDateCheck(){
   const errorElement = document.getElementById("endDateerror");
   if (Input.value == "") {
       errorElement.innerHTML = "Required.";
-      Input.classList.add("highlight");
       return false;
   } else {
       errorElement.innerHTML = "";
-      Input.classList.remove("highlight");
   }
+  const startDateInput = document.getElementById("startDate").value;
+  const endDateInput = document.getElementById("endDate").value;
+  const startDate = new Date(startDateInput);
+  const endDate = new Date(endDateInput);
+
+  if (endDate <= startDate){
+        errorElement.innerHTML = "End datetime should be after the start datetime.";
+        return false;
+  }else {
+        errorElement.innerHTML = "";
+  }
+
   return true;
 }
 function locationCheck(){
@@ -166,17 +176,6 @@ function descriptionCheck(){
   }
   return true;
 } 
-/*function nameTitleCheck(){
-  const Input = document.getElementById("nameTitle");
-  const errorElement = document.getElementById("nameTitleError");
-  if (Input.value == "") {
-      errorElement.innerHTML = "Required.";
-      return false;
-  } else {
-      errorElement.innerHTML = "";
-  }
-  return true;
-} */
 function Output(){
   const myDiv = document.createElement("div");
   const Name = document.createElement("p");
@@ -249,35 +248,25 @@ function Output(){
     endDateCheck();
     locationCheck();
     descriptionCheck();
-  }
-  function showConfirmation() {
-    // Display a confirmation dialog and store the result
-    const userConfirmed = window.confirm("Do you want to proceed?");
-
-    // Check the user's choice
-    if (userConfirmed) {
-        alert("You clicked OK! Proceeding...");
-    } else {
-        alert("You clicked Cancel! Action canceled.");
-    }
-}  
+  } 
 async function submitForm(event) {
   event.preventDefault();
 
     // Validate form inputs before submission
     if (!validateName() || !validateStudentID() || !validateEmail() || !TitleCheck() || !ActivityCheck() || !AcademicYearCheck() ||
 !semesterCheck() || !startDateCheck() || !endDateCheck()|| !locationCheck()|| !descriptionCheck()) {
+      showCustomAlert();
       return;
     }
-  const startDateInput = document.getElementById("startDate").value;
+  /*const startDateInput = document.getElementById("startDate").value;
   const endDateInput = document.getElementById("endDate").value;
   const startDate = new Date(startDateInput);
-  const endDate = new Date(endDateInput);
+  const endDate = new Date(endDateInput);*/
 
-  if (endDate <= startDate) {
+  /*if (endDate <= startDate) {
     alert("End datetime should be after the start datetime.");
     return;
-  }
+  }*/
   
     //console.log(data);
     //alert(JSON.stringify(data));

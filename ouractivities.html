@@ -196,8 +196,6 @@
     </div>
 		</div>
     
-    <!-- Trigger button -->
-    <button onclick="showConfirm()">Show Confirm</button>
     <!-- Overlay and Modal -->
     <div id="overlay"></div>
     <div id="confirmModal">
@@ -209,6 +207,16 @@
       <button onclick="cancelAction()" id="nobot">No</button></div>
 			</div>
     </div>
+
+
+    <div id="customAlert" class="modal-overlay">
+      <div class="modal-content">
+		  <img src="Media/cancel.png" class="sfsf">
+        <p class="marc">Cannot submit please check your fill</p>
+        <button onclick="hideCustomAlert()" id="okbot">OK</button>
+      </div>
+    </div>
+    
 	</div>
 	</div>
 		
@@ -253,6 +261,13 @@
       // Hide the overlay and modal
       document.getElementById("overlay").style.display = "none";
       document.getElementById("confirmModal").style.display = "none";
+  }
+  function showCustomAlert() {
+    document.getElementById("customAlert").style.display = "flex";
+  }
+
+  function hideCustomAlert() {
+    document.getElementById("customAlert").style.display = "none";
   }
   </script>
   </body>
