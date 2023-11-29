@@ -1,0 +1,669 @@
+@media screen and (min-width: 768px)
+{
+	body {
+    font-family: Arial, sans-serif;
+  }
+
+ body {
+	background-image:url("cssMedia/Bg01.jpg");
+	width: 100%;
+	height: 100%;
+	margin-top: 0;
+	background-size:cover;
+	background-attachment:fixed;
+	margin: auto;
+}
+  /* Styling for the form container */
+  .form-container {
+	    margin: auto;
+  border-radius: 60px;
+  padding: 10px;
+  background-color: #fff;
+  height: 100%;
+  background-image: url("cssMedia/Bg01Br.jpg");
+background-size:cover;
+background-attachment:fixed;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	display: flex;
+	flex-direction: column;
+	  
+	  
+	  
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  /* Center-align the heading and add margin at the bottom */
+  .form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for each form group */
+  .form-group {
+    margin: 20px;
+	  margin-top: -10px;
+	padding: 20px;
+	 border-radius: 40px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  /* Styling for form group labels */
+  .form-group label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  /* Styling for various form input types */
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group select,
+  .form-group textarea,
+  .form-group input[type="datetime-local"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	 font-family: Poppins;
+	  font-size: 8pt;
+	  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  
+  /* Allow vertical resizing for textareas */
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  /* Styling for select dropdowns */
+  .form-group select {
+    width: 100%;
+  }
+  
+  /* Styling for the submit button */
+  .form-group input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Styling for small helper text */
+  .form-group small {
+    font-size: 9px;
+    color: black;
+	  font-family: Poppins;
+  }
+  
+  /* New styles for error messages */
+  
+  /* Position the error message relatively within the form group */
+  .form-group {
+    position: relative;
+  }
+  
+  /* Styling for error messages */
+  .error {
+    color: white;
+    display: block;
+    margin-top: 10px;
+	font-family: Poppins;
+	  font-weight: 600;
+	background-color: #9B342F;
+	  font-size: 8pt;
+  }
+ 
+
+ #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+	 border-radius: 20px;
+}
+
+/* Styles for the modal */
+#confirmModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+	font-family: Poppins;
+	font-weight: 600;
+}
+
+/* Style for the buttons *//*
+#confirmModal button {
+    margin: 0 5px;
+    padding: 10px;
+    cursor: pointer;
+	background-color: #1A1135;
+	font-size: 20pt;
+	font-family: Poppins;
+	font-weight: 600;
+	color: white;
+}*/
+.teee{
+  color: #4caf50;
+}
+.lev3 {
+	display: inline-flex;
+	flex-direction: column;
+	width: 100%;
+}
+div.tophead {
+    display: flex;
+	height: 300px;
+}
+div.mhead {
+    background-color: #1A1135;
+    display:inline-flex;
+    padding: 15px;
+    border-radius: 0 0 2em 2em;
+    margin: 0 0 2em 2em;
+	transform: scale(1);
+	position: fixed;
+	margin-left: 1em;
+	margin-top: 0em;
+	flex-direction: column;
+	transform: scale(0.6);
+	margin-top:-80px; 
+}
+div.nev1 {
+    color:white ;
+    margin-left: 20em;
+    margin-top: 2em;
+	flex-direction: row;
+	font-weight: 600;
+}
+a.nev2 {
+    font-family:Poppins ;
+    color: white;
+    margin-right: 2em;
+    font-size: 20pt;
+	background-color: #F87862;
+	border-radius: 10px;
+	padding: 6px 25px 6px 25px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+div.s1head {
+    display:inline-flex;
+    flex-direction: column;
+    margin: auto;
+}
+div.s2head {
+    display:inline-flex;
+    flex-direction: column;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+p.my {
+    font-family: Poppins;
+    font-size: 25pt;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    margin: auto ;
+	background-color: #1A1135;
+	margin-top: 10px;
+}
+p.cstu {
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+    font-family: Poppins;
+    font-size: 30pt;
+    color: white;
+    font-weight: 600;
+    margin: 0;
+    background-color: #5B4092;
+    border-radius: 20px;
+	text-align: center;
+	padding: 5px;
+}
+p.passp {
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+    font-family: Poppins;
+    font-size: 18pt;
+    color: white;
+    font-weight: 600;
+    margin: auto;
+}
+.nev3 {
+	font-family:Poppins ;
+    color: white;
+    margin-right: 0em;
+    font-size: 20pt;
+	background-color: #B24338;
+	border-radius: 10px;
+	padding: 6px 25px 6px 25px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.lev2 {
+  margin: auto;
+  max-width:1200px;
+}
+.lev3 {
+	display: inline-flex;
+	flex-direction: column;
+	width: 100%;
+}
+.gop1 {
+	background-color: #BC473B;
+	margin-top:10px;
+	padding: 10px;
+	border-radius: 20px;
+}
+.grops {
+	font-family: Poppins;
+	color: white;
+	font-size: 18pt;
+	text-align: center;
+	margin: auto;
+	font-weight: 600;
+		
+}
+.ptes1 {
+	display: flex;
+}
+a.nev2:hover {
+	background-color: #9B342F;
+}
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+a.nev3:hover {
+	background-color: #9B342F;
+}
+
+.headssds {
+	font-family: Poppins;
+	font-size: 30pt;
+	text-align: center;
+	margin: 0;
+	font-weight: 900;
+	color: white;
+	
+}
+
+.topivde {
+		font-family: Poppins;
+	font-size: 12pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 600;
+	color: #1A1135;
+	background-color: white;
+	width: 62%;
+	padding: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 10px;
+	margin-left: 0;
+	border-radius: 5px;
+}
+
+#Myear {
+	background-color: #F87862;
+	padding: 2px;
+	color: white;
+}
+
+#yeyydas {
+	background-color: white;
+	width: 220px;
+	font-family: Poppins;
+	padding: 10px;
+	border-radius: 10px;
+	margin-left: 20px;
+	font-size: 8pt;
+}
+
+.topivde2 {
+		font-family: Poppins;
+	font-size: 12pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 600;
+	color: #1A1135;
+	background-color: white;
+	width: 26%;
+	padding: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 10px;
+	margin-left: 0;
+	border-radius: 5px;
+}
+
+.topivde3 {
+		font-family: Poppins;
+	font-size: 12pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 600;
+	color: #1A1135;
+	background-color: white;
+	width: 42%;
+	padding: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 10px;
+	margin-left: 0;
+	border-radius: 5px;
+}
+
+.topivdeTnL {
+		font-family: Poppins;
+	font-size: 15pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 900;
+	color: #F87862;
+	width: 95%;
+	background-color: white;
+	padding: 10px;
+	margin: 15px;
+	margin-left: 0;
+	border-radius: 18px;
+}
+
+.topivde6 {
+	font-family: Poppins;
+	font-size: 12pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 300;
+	color: #1A1135;
+	background-color: white;
+	width: 38%;
+	padding: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 10px;
+	margin-left: 0;
+	border-radius: 5px;
+}
+
+.topivde7 {
+		font-family: Poppins;
+	font-size: 12pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 600;
+	color: #1A1135;
+	background-color: white;
+	width: 23%;
+	padding: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 10px;
+	margin-left: 0;
+	border-radius: 5px;
+}
+
+.topivde8 {
+			font-family: Poppins;
+	font-size: 12pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 600;
+	color: #1A1135;
+	background-color: white;
+	width: 40%;
+	padding: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 10px;
+	margin-left: 0;
+	border-radius: 5px;
+}
+
+.topivde9 {
+				font-family: Poppins;
+	font-size: 12pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 600;
+	color: #1A1135;
+	background-color: white;
+	width: 40%;
+	padding: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 10px;
+	margin-left: 0;
+	border-radius: 5px;
+}
+
+.topivde10 {
+			font-family: Poppins;
+	font-size: 12pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 600;
+	color: #1A1135;
+	background-color: white;
+	width: 20%;
+	padding: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 10px;
+	margin-left: 0;
+	border-radius: 5px;
+}
+
+.sada {
+			font-family: Poppins;
+	font-size: 15pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 900;
+	color: #F87862;
+	width: 95%;
+	background-color: white;
+	padding: 10px;
+	margin: 15px;
+	margin-left: 0;
+	border-radius: 15px;
+}
+
+.form-group02 {
+	    margin-left: 120px;
+	padding: 20px;
+	 border-radius: 15px;
+	display: inline-flex;
+	flex-direction: column;
+	/*box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;*/
+}
+  .form-group02 input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+	  font-family: Poppins;
+	  font-size: 15pt;
+	  font-weight: 600;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	 margin-left: 0px;
+	  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  }
+  .form-group02 button[type="button"] {
+    background-color: #9B342F;
+    color: white;
+	font-family: Poppins;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	  margin-top: 10px;
+	  margin-left: 0px;
+	  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+	  width: 200px;
+  }
+.recoded {
+	
+	    margin: auto;
+  max-width:1200px;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: #fff;
+  height: 100%;
+  background-image: url("cssMedia/Bg01Br.jpg");
+background-size:cover;
+background-attachment:fixed;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	display: flex;
+	flex-direction: column;
+	  
+	  
+	  
+    max-width: 500px;
+    margin: 20px auto;
+	margin-top:80px; 
+    padding: 20px;
+}
+
+.TestRec01 {
+	    margin: 20px;
+	padding: 20px;
+	 border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	font-family: Poppins;
+	font-size: 10pt;
+	color: white;
+	line-height: 15px;
+	background-color: rgba(43, 30, 85, 0.6);
+}
+
+.rechead {
+	font-size: 20pt;
+	text-align: center;
+	font-weight: 600;
+	background-color: #9B342F;
+	border-radius: 25px;
+	margin: auto;
+	line-height: 2em;
+}
+b {
+	font-weight: 600;
+	/*background-color: #2B1E52;
+	padding: 3px;
+	border-radius: 10px;*/
+}
+.highlight {
+  background-color: #F26E61;
+  border: 3px solid #7A2020;
+}
+.sfsf {
+	height: 100px;
+	width: 100px;
+}
+
+.med {
+	display: inline-flex;
+	flex-direction: column;
+	margin: auto;
+	align-items: center;
+}
+
+.marc {
+	font-family: Poppins;
+	font-size: 20pt;
+	font-weight: 600;
+}
+
+.cdsl {
+	display: flex;
+}
+
+.yesbot {
+	background-color: #386641;
+	font-size: 20pt;
+}
+
+#yesbot {
+    margin: 0 5px;
+    padding: 10px;
+    cursor: pointer;
+	background-color: #1A1135;
+	font-size: 20pt;
+	font-family: Poppins;
+	font-weight: 600;
+	color: white;
+	width: 100px;
+	border-radius: 15px;
+}
+
+#nobot {
+	margin: 0 5px;
+    padding: 10px;
+    cursor: pointer;
+	background-color: #CCCCCC;
+	font-size: 20pt;
+	font-family: Poppins;
+	font-weight: 600;
+	color: white;
+	width: 100px;
+	border-radius: 15px;
+}
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles for the modal content */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#okbot {
+	    margin: 0 5px;
+    padding: 10px;
+    cursor: pointer;
+	background-color: #1A1135;
+	font-size: 20pt;
+	font-family: Poppins;
+	font-weight: 600;
+	color: white;
+	width: 100px;
+	border-radius: 15px;
+}
+	
+	
+	
+}

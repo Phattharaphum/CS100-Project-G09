@@ -180,8 +180,8 @@ div.mhead {
 	
 }
 div.nev1 {
+	display: flex;
     color:white ;
-    align-self: baseline;
     margin-left: 40em;
     margin-top: 4em;
 	flex-direction: row;
@@ -438,7 +438,7 @@ a.nev3:hover {
 }
 
 .topivde9 {
-				font-family: Poppins;
+	font-family: Poppins;
 	font-size: 15pt;
 	text-align: left;
 	margin: auto;
@@ -487,7 +487,7 @@ a.nev3:hover {
 }
 
 .form-group02 {
-	    margin: 20px;
+	margin: 20px;
 	padding: 20px;
 	 border-radius: 15px;
 	display: inline-flex;
