@@ -4,12 +4,13 @@ function validateName() {
   const fullnameInput = document.getElementById("fullname");
   const names = fullnameInput.value.trim().split(" ");
   const errorElement = document.getElementById("fullnameError");
-
   if (names.length !== 2) {
     errorElement.textContent = "Please enter both your Firstname and Lastname.";
+    fullnameInput.classList.add("highlight");
     return false;
   } else {
     errorElement.textContent = ""; // Clear the error message when valid
+    fullnameInput.classList.remove("highlight");
   }
   return true;
   
@@ -28,10 +29,13 @@ function validateStudentID() {
   console.log(Myears);
   if (!studentIDPattern.test(studentIDInput.value)) {
     errorElement.textContent = "Please enter a 10-digit Student ID.";
+    studentIDInput.classList.add("highlight");
+    document.getElementById("Myear").innerHTML="";
     return false;
   } else {
     errorElement.textContent = ""; // Clear the error message when valid
     document.getElementById("Myear").innerHTML="25"+Myears;
+    studentIDInput.classList.remove("highlight");
   }
   return true;
 }
@@ -44,9 +48,11 @@ function validateEmail() {
   if (!emailPattern.test(emailInput.value)) {
     errorElement.textContent =
       "Please provide a valid university email in the format 'xxx.yyy@dome.tu.ac.th'.";
+      emailInput.classList.add("highlight");
     return false;
   } else {
     errorElement.textContent = ""; // Clear the error message when valid
+    emailInput.classList.remove("highlight");
   }
   return true;
 }
@@ -56,11 +62,14 @@ function TitleCheck(){
   const errorElement = document.getElementById("workTitleerror");
   if (Input.value == "") {
       errorElement.innerHTML = "Required.";
+      Input.classList.add("highlight");
       return false;
   } else if(!TitlePattern.test(Input.value)){
       errorElement.innerHTML = "Title must have more than 2 letter";
+      Input.classList.add("highlight");
   }
       else {
+        Input.classList.remove("highlight");
       errorElement.innerHTML = "";
   }
   return true;
@@ -71,9 +80,11 @@ function ActivityCheck(){
   const errorElement = document.getElementById("activityTypeerror");
   if (Input.value == "") {
       errorElement.innerHTML = "Required.";
+      Input.classList.add("highlight");
       return false;
   } else {
       errorElement.innerHTML = "";
+      Input.classList.remove("highlight");
   }
   return true;
 }
@@ -82,9 +93,11 @@ function AcademicYearCheck(){
   const errorElement = document.getElementById("academicYearerror");
   if (Input.value == "") {
       errorElement.innerHTML = "Required.";
+      Input.classList.add("highlight");
       return false;
   } else {
       errorElement.innerHTML = "";
+      Input.classList.remove("highlight");
   }
   return true;
 }
@@ -93,9 +106,11 @@ function semesterCheck(){
   const errorElement = document.getElementById("semestererror");
   if (Input.value == "") {
       errorElement.innerHTML = "Required.";
+      Input.classList.add("highlight");
       return false;
   } else {
       errorElement.innerHTML = "";
+      Input.classList.remove("highlight");
   }
   return true;
 }
@@ -104,9 +119,11 @@ function startDateCheck(){
   const errorElement = document.getElementById("startDateerror");
   if (Input.value == "") {
       errorElement.innerHTML = "Required.";
+      Input.classList.add("highlight");
       return false;
   } else {
       errorElement.innerHTML = "";
+      Input.classList.remove("highlight");
   }
   return true;
 }
@@ -115,9 +132,11 @@ function endDateCheck(){
   const errorElement = document.getElementById("endDateerror");
   if (Input.value == "") {
       errorElement.innerHTML = "Required.";
+      Input.classList.add("highlight");
       return false;
   } else {
       errorElement.innerHTML = "";
+      Input.classList.remove("highlight");
   }
   return true;
 }
@@ -126,9 +145,11 @@ function locationCheck(){
   const errorElement = document.getElementById("locationerror");
   if (Input.value == "") {
       errorElement.innerHTML = "Required.";
+      Input.classList.add("highlight");
       return false;
   } else {
       errorElement.innerHTML = "";
+      Input.classList.remove("highlight");
   }
   return true;
 }
@@ -137,9 +158,11 @@ function descriptionCheck(){
   const errorElement = document.getElementById("descriptionerror");
   if (Input.value == "") {
       errorElement.innerHTML = "Required.";
+      Input.classList.add("highlight");
       return false;
   } else {
       errorElement.innerHTML = "";
+      Input.classList.remove("highlight");
   }
   return true;
 } 
@@ -185,15 +208,15 @@ function Output(){
   Acti.textContent=ActiInput;
   Acti.className="rechead";
 
-  Name.textContent = "Name :" + fullnameInput;
-  ID.textContent = "Student ID :" + IDInput;
-  Email.textContent = "Email :" + EmailInput;
+  Name.textContent = "Name : " + fullnameInput;
+  ID.textContent = "Student ID : " + IDInput;
+  Email.textContent = "Email : " + EmailInput;
   Actyp.textContent = "Activity Type : " +ActypInput;
   Acad.textContent = "Academic Year : " +AcadInput;
-  Semis.textContent = "Semeter :" +SemisInput;
+  Semis.textContent = "Semeter : " +SemisInput;
   DataS.textContent = "Start date and time : " +DataSInput;
-  DateE.textContent = "End date and time :" +DateEInput;
-  Loca.textContent = "Location :" +LocaInput;
+  DateE.textContent = "End date and time : " +DateEInput;
+  Loca.textContent = "Location : " +LocaInput;
   Des.textContent = "Description : " +DesInput;
 
 
@@ -210,6 +233,7 @@ function Output(){
   myDiv.appendChild(Loca);
   myDiv.appendChild(Des);
   document.getElementById("outputContainer").appendChild(myDiv);
+	clearForm();
 }
 
   // Function to validate form inputs on user input
@@ -257,11 +281,9 @@ async function submitForm(event) {
   
     //console.log(data);
     //alert(JSON.stringify(data));
-    const fullnameInput = document.getElementById("fullname");
-    document.getElementById("nameOutput").innerHTML = "Name: " + fullnameInput.value;
-    Output();
-    showConfirmation();
-    clearForm();
+    //showConfirmation();
+	showConfirm();
+    
 } 
 
   // Event listener for form submission

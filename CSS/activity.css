@@ -92,7 +92,8 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   /* Styling for small helper text */
   .form-group small {
     font-size: 12px;
-    color: #888;
+    color: black;
+	  font-family: Poppins;
   }
   
   /* New styles for error messages */
@@ -104,12 +105,16 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   
   /* Styling for error messages */
   .error {
-    color: red;
+    color: white;
     display: block;
-    margin-top: 5px;
+    margin-top: 10px;
+	font-family: Poppins;
+	  font-weight: 600;
+	background-color: #9B342F;
   }
-  
-  #overlay {
+ 
+
+ #overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -117,6 +122,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+	 border-radius: 20px;
 }
 
 /* Styles for the modal */
@@ -129,14 +135,23 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+	font-family: Poppins;
+	font-weight: 600;
 }
 
-/* Style for the buttons */
+/* Style for the buttons *//*
 #confirmModal button {
     margin: 0 5px;
     padding: 10px;
     cursor: pointer;
-}
+	background-color: #1A1135;
+	font-size: 20pt;
+	font-family: Poppins;
+	font-weight: 600;
+	color: white;
+}*/
 .teee{
   color: #4caf50;
 }
@@ -550,4 +565,60 @@ b {
 	/*background-color: #2B1E52;
 	padding: 3px;
 	border-radius: 10px;*/
+}
+.highlight {
+  background-color: #F26E61;
+  border: 3px solid #7A2020;
+}
+.sfsf {
+	height: 100px;
+	width: 100px;
+}
+
+.med {
+	display: inline-flex;
+	flex-direction: column;
+	margin: auto;
+	align-items: center;
+}
+
+.marc {
+	font-family: Poppins;
+	font-size: 20pt;
+	font-weight: 600;
+}
+
+.cdsl {
+	display: flex;
+}
+
+.yesbot {
+	background-color: #386641;
+	font-size: 20pt;
+}
+
+#yesbot {
+    margin: 0 5px;
+    padding: 10px;
+    cursor: pointer;
+	background-color: #1A1135;
+	font-size: 20pt;
+	font-family: Poppins;
+	font-weight: 600;
+	color: white;
+	width: 100px;
+	border-radius: 15px;
+}
+
+#nobot {
+	margin: 0 5px;
+    padding: 10px;
+    cursor: pointer;
+	background-color: #CCCCCC;
+	font-size: 20pt;
+	font-family: Poppins;
+	font-weight: 600;
+	color: white;
+	width: 100px;
+	border-radius: 15px;
 }

@@ -83,8 +83,8 @@
 			<div class="form-group">
           <label for="workTitle" class="topivde">Work/Activity Title</label>
           <input type="text" id="workTitle" name="workTitle" />
-        
-        <div><p id="workTitleerror"></p></div></div>
+         <small>Required.</small>
+        <div><p id="workTitleerror" class="error"></p></div></div>
   
         <div class="form-group">
           <label for="activityType" class="topivde">Type of Work/Activity</label>
@@ -98,8 +98,8 @@
             <option value="Competition">Competition</option>
             <option value="Computer Science">Computer Science</option>
           </select>
-        
-        <div><p id="activityTypeerror"></p></div> 
+        <small>Required.</small>
+        <div><p id="activityTypeerror" class="error"></p></div> 
 		</div></div>
   
         <!-- Academic Year Field -->
@@ -120,8 +120,8 @@
             <option value="2568">2568</option>
             <option value="2569">2569</option>
           </select>
-        
-				<div><p id="academicYearerror"></p></div> 
+        <small>Required.</small>
+				<div><p id="academicYearerror" class="error"></p></div> 
         <!-- Semester Field -->
           <label for="semester" class="topivde7">Semester</label>
           <select id="semester" name="semester">
@@ -130,29 +130,37 @@
             <option value="2">2</option>
             <option value="Summer">Summer</option>
           </select>
-        <div><p id="semestererror"></p></div>  </div> 
+				<small>Required.</small>
+        <div><p id="semestererror" class="error"></p></div>  </div> 
         <!-- Start Date/Time Field -->
         <div class="form-group">
           <label for="startDate" class="topivde8">Start Date/Time</label>
           <input type="datetime-local" id="startDate" name="startDate" />
-        
-        <div><p id="startDateerror"></p></div>  
+        <small>Required.</small>
+        <div><p id="startDateerror" class="error"></p></div>  
         <!-- End Date/Time Field -->
           <label for="endDate" class="topivde9">End Date/Time</label>
           <input type="datetime-local" id="endDate" name="endDate" />
-        <div><p id="endDateerror"></p></div> </div>
+        <small>Required.</small>
+			<div>
+			<p id="endDateerror" class="error"></p></div> </div>
         <!-- Location Field -->
         <div class="form-group">
           <label for="location" class="topivde10">Location</label>
           <input type="text" id="location" name="location" />
+			<small>Required.</small>
+			<div><p id="locationerror" class="error"></p></div>
         </div>
-        <div><p id="locationerror"></p></div> </div> 
+			
+         </div> 
         <!-- Description Field -->
         <div class="form-group">
           <label for="description" class="sada">Description</label>
           <textarea id="description" name="description" rows="4"></textarea>
+			<small>Required.</small>
+			<div><p id="descriptionerror" class="error"></p></div> 
         </div>
-        <div><p id="descriptionerror"></p></div> 
+        
 		  
 		  
 		  
@@ -168,7 +176,7 @@
     </div>
 	<div class="recoded">
 		<h1 class="headssds">Activity Record</h1>
-		<div class="TestRec01">
+		<!--<div class="TestRec01">
 			<p class="rechead">Activity Title</p>
 		<p class=""> <b>Name : </b>Phattharaphum</p>
 		<p class=""> <b>LastName :</b> Kingchai</p>
@@ -183,23 +191,23 @@
 			<p class=""> End date and time : 2</p>
 			<p class=""> Location : test</p>
 			<p class=""> Description : test</p>
-		</div>
+		</div>-->
 	<div id="outputContainer">
     </div>
 		</div>
-    <div>
-      <p>TEstassdsd</p>
-      <p id="nameOutput"></p>
-    </div>
     
     <!-- Trigger button -->
     <button onclick="showConfirm()">Show Confirm</button>
     <!-- Overlay and Modal -->
     <div id="overlay"></div>
     <div id="confirmModal">
-      <p>Do you want to proceed?</p>
-      <button onclick="confirmAction()">Yes</button>
-      <button onclick="cancelAction()">No</button>
+		<div class="med"> 
+		<img src="Media/edit.png" class="sfsf">
+      <p class="marc">make a record</p>
+			<div class="cdsl">  
+      <button onclick="confirmAction()" id="yesbot">Yes</button>
+      <button onclick="cancelAction()" id="nobot">No</button></div>
+			</div>
     </div>
 	</div>
 	</div>
@@ -230,13 +238,14 @@
   }
   function confirmAction() {
       // Handle the confirmed action
-      alert("You clicked Yes! Proceeding...");
       // Hide the overlay and modal
+	  Output();
       hideConfirm();
+	  clearForm();
   }
   function cancelAction() {
       // Handle the canceled action
-      alert("You clicked No! Action canceled.");
+      //alert("You clicked No! Action canceled.");
       // Hide the overlay and modal
       hideConfirm();
   }
