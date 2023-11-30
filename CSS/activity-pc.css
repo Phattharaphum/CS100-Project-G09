@@ -114,6 +114,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	font-family: Poppins;
 	  font-weight: 600;
 	background-color: #9B342F;
+	  
   }
  
 
@@ -328,6 +329,7 @@ a.nev3:hover {
 	background-color: #F87862;
 	padding: 2px;
 	color: white;
+	font-weight: 600;
 }
 
 #yeyydas {
@@ -550,7 +552,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	padding: 20px;
 	 border-radius: 15px;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	font-family: Poppins;
+	font-family: Kanit;
 	font-size: 20pt;
 	color: white;
 	line-height: 15px;
@@ -558,6 +560,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .rechead {
+	font-family: Kanit;
 	font-size: 35pt;
 	text-align: center;
 	font-weight: 600;
@@ -663,4 +666,21 @@ b {
 	width: 100px;
 	border-radius: 15px;
 }
+}
+#yeyydass {
+		background-color: white;
+	width: 450px;
+	font-family: Poppins;
+	padding: 10px;
+	border-radius: 10px;
+	margin-left: 20px;
+}
+
+#MyFaci {
+	font-family: Kanit;
+	font-size: 12pt;
+	background-color: #F87862;
+	padding: 2px;
+	color: white;
+	font-weight: 600;
 }

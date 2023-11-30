@@ -65,7 +65,7 @@
                 <p id="yeyydas"> Your School Year is
                   <span id="Myear"></span>
                 </p>
-                <p id="yeyydas"> Your Faci is
+                <p id="yeyydass"> Your Faculty is
                   <span id="MyFaci"></span>
                 </p>
               </div>
@@ -188,13 +188,28 @@
           <!-- Submit Button -->
           <div class="form-group02">
             <input type="submit" value="Submit" />
-            <button type="button" onclick="clearForm()">Clear Form</button>
+            <button type="button" onclick="clbt()" >Clear Form</button>
 			    </div>
         </form>
       </div>
 	    <div class="recoded">
 		    <h1 class="headssds">Activity Record</h1>
 	      <div id="outputContainer">
+		<!--				<div class="TestRec01">
+			<p class="rechead">Activity Title</p>
+			<p class=""> Name : Phattharaphum</p>
+			<p class=""> LastName : Kingchai</p>
+			<p class=""> Student ID : 6609612160</p>
+			<p class=""> Email : test.asd@dome.tu.ac.th</p>
+				<p class=""> Activity Title : Test</p>
+			<p class=""> Activity Type : Test</p>
+				<p class=""> Academic Year : 2566</p>
+				<p class=""> Semeter : 2</p>
+				<p class=""> Start date and time : 2</p>
+				<p class=""> End date and time : 2</p>
+				<p class=""> Location : test</p>
+				<p class=""> Description : test</p>
+			</div>-->	
         </div>
 		  </div>
     
@@ -223,6 +238,10 @@
     <!-- JavaScript -->
     <script src="../JavaScript/scriptform.js"></script>
     <script>
+      function clbt(){
+        alert("This form has been cleared.");
+        clearForm();
+      }
       function clearForm() {
           // Get the form by its ID
           const form = document.getElementById("myForm");
@@ -236,6 +255,7 @@
               }
           }
       }
+
       function showConfirm() {
       document.getElementById("overlay").style.display = "block";
       document.getElementById("confirmModal").style.display = "block";

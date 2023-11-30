@@ -49,7 +49,7 @@ const facultyTexts = [
     "วิทยาลัยนานาชาติปรีดี พนมยงค์",
     "โครงการนิติเศรษฐศาสตร์การค้าระหว่างประเทศ"
 ];
-
+let Facul;
 // Function to validate Student ID
 function validateStudentID() {
   const studentIDInput = document.getElementById("studentID");
@@ -73,22 +73,43 @@ function validateStudentID() {
           Faci = facultyTexts[i];
           break; // Exit the loop once a match is found
       }
+      Faci ="Your ID is not correct"
   }
-  
+  Facul=Faci;
 
   if (!studentIDPattern.test(studentIDInput.value)) {
-    errorElement.textContent = "Please enter a 10-digit Student ID.";
-    studentIDInput.classList.add("highlight");
-    document.getElementById("Myear").innerHTML="";
-    document.getElementById("MyFaci").innerHTML="";
-    return false;
+      errorElement.textContent = "Please enter a 10-digit Student ID.";
+      studentIDInput.classList.add("highlight");
+      document.getElementById("Myear").innerHTML = "";
+      document.getElementById("MyFaci").innerHTML = "";
+      return false;
   } else {
-    errorElement.textContent = ""; // Clear the error message when valid
-    document.getElementById("Myear").innerHTML="25"+Myears;
-    document.getElementById("MyFaci").innerHTML=Faci;
-    studentIDInput.classList.remove("highlight");
+      errorElement.textContent = ""; 
+
+      const tuFaci = (parseInt(studentIDInput.value[2]) * 10) + (parseInt(studentIDInput.value[3]) * 1);
+
+      document.getElementById("Myear").innerHTML = "25" + Myears;
+      document.getElementById("MyFaci").innerHTML = Faci;
+
+      let isValidFaci = false;
+
+      for (let i = 0; i < facultyTexts.length; i++) {
+          if (tuFaci === facultyValues[i]) {
+              isValidFaci = true;
+              break; 
+          }
+      }
+
+      if (isValidFaci) {
+          studentIDInput.classList.remove("highlight");
+          errorElement.textContent = "";
+          return true;
+      } else {
+          studentIDInput.classList.add("highlight");
+          errorElement.textContent = "Invalid student ID. Please correct.";
+          return false;
+      }
   }
-  return true;
 }
 
 // Function to validate University Email
@@ -292,6 +313,8 @@ function Output(){
   const Name = document.createElement("p");
   const Acti = document.createElement("p");
   const ID = document.createElement("p");
+  const Year = document.createElement("p");
+  const Facili = document.createElement("p");
   const Email = document.createElement("p");
   const Actyp = document.createElement("p");
   const Acad = document.createElement("p");
@@ -312,12 +335,15 @@ function Output(){
   const DateEInput = document.getElementById("endDate").value;
   const LocaInput = document.getElementById("location").value;
   const DesInput = document.getElementById("description").value;
+  const DesInputIn = Facul;
 
   Acti.textContent=ActiInput;
   Acti.className="rechead";
 
   Name.textContent = "Name : " + fullnameInput;
   ID.textContent = "Student ID : " + IDInput;
+  Year.textContent = "School year : "+"25" + Myears;
+  Facili.textContent = "Faculty  : " + DesInputIn;
   Email.textContent = "Email : " + EmailInput;
   Actyp.textContent = "Activity Type : " +ActypInput;
   Acad.textContent = "Academic Year : " +AcadInput;
@@ -331,6 +357,8 @@ function Output(){
   myDiv.appendChild(Acti);
   myDiv.appendChild(Name);
   myDiv.appendChild(ID);
+  myDiv.appendChild(Year);
+  myDiv.appendChild(Facili);
   myDiv.appendChild(Email);
   myDiv.appendChild(Actyp);
   myDiv.appendChild(Acad);
