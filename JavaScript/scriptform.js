@@ -303,19 +303,8 @@ async function submitForm(event) {
       showCustomAlert();
       return;
     }
-  /*const startDateInput = document.getElementById("startDate").value;
-  const endDateInput = document.getElementById("endDate").value;
-  const startDate = new Date(startDateInput);
-  const endDate = new Date(endDateInput);*/
 
-  /*if (endDate <= startDate) {
-    alert("End datetime should be after the start datetime.");
-    return;
-  }*/
-  
-    //console.log(data);
-    //alert(JSON.stringify(data));
-    //showConfirmation();
+
     const formData = new FormData(event.target);
   const data = {
     first_name: formData.get("fullname").split(" ")[0],
