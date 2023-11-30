@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>Our Activities</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>Our Activities</title>
 	<link rel="stylesheet" href="CSS/activity-mb.css">
 	<link rel="stylesheet" href="CSS/activity-tl.css">
-    <link rel="stylesheet" href="CSS/activity-pc.css">
-	
-	
-	
-	
-	
-	
+  <link rel="stylesheet" href="CSS/activity-pc.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -21,194 +15,207 @@
 </head>
 <body>
 	<div class="lev1">
-	<div class="lev2">
-	<div class="lev3">
-	<div class="tophead">
-            <div class="mhead">
-				<div class="ptes1">
-                <div class="s1head">
-                  <p class="my">Our</p>
-                  <p class="cstu">CSTU</p>
+	  <div class="lev2">
+	    <div class="lev3">
+	      <div class="tophead">
+          <div class="mhead">
+				    <div class="ptes1">
+              <div class="s1head">
+                <p class="my">Our</p>
+                <p class="cstu">CSTU</p>
                </div>
                <div class="s2head">
                   <p class="passp">passport</p>
                </div>
-					</div>
-				<div class="gop1">
-					<p class="grops">Group 09</p>
-				</div>
-            </div>
-            <div class="nev1">
-                <a class="nev2" href="index.html">Home</a>
-                <a class="nev3" href="">Activities</a>
-            </div>
-    </div>
-	</div>
-    <!-- Form Container -->
-    <div class="form-container">
-      <h1 class="headssds">Our Activity</h1>
-      <!-- Main Form -->
-      <form id="myForm" action="#" method="post">
+					  </div>
+				    <div class="gop1">
+					    <p class="grops">Group 09</p>
+				    </div>
+          </div>
+          <div class="nev1">
+            <a class="nev2" href="index.html">Home</a>
+            <a class="nev3" href="">Activities</a>
+          </div>
+        </div>
+	    </div>
+
+      <!-- Form Container -->
+      <div class="form-container">
+        <h1 class="headssds">Our Activity</h1>
+
+        <!-- Main Form -->
+        <form id="myForm" action="#" method="post">
 		
         <!-- Firstname and Lastname Field -->
-        <div class="form-group">
-			<p class="topivdeTnL">Personal Information</p>
-			<div class="form-group">
-          <label for="fullname" class="topivde">Firstname and Lastname</label>
-          <input type="text" id="fullname" name="fullname" />
-          <small>Only enter your first name and last name, middle name is not necessary.</small>
-          <span id="fullnameError" class="error"></span>
-        
-        
-        <!-- Student ID Field -->
-        
-          <label for="studentID" class="topivde2">Student ID</label>
-          <input type="text" id="studentID" name="studentID" />
-          <small>Please enter your 10-digit student ID.</small>
-          <span id="studentIDError" class="error"></span>
-		<div><p id="yeyydas"> Your School Year is
-          <span id="Myear"></span>
-        </p></div>
-        </div>
-        <!-- University Email Field -->
-        <div class="form-group">
-          <label for="email" class="topivde3">University Email</label>
-          <input type="email" id="email" name="email" />
-          <small>Please provide your university email in the format "xxx.yyy@dome.tu.ac.th".</small>
-          <span id="emailError" class="error"></span>
-        </div></div>
+          <div class="form-group">
+			      <p class="topivdeTnL">Personal Information</p>
+			      <div class="form-group">
+              <label for="fullname" class="topivde">Firstname and Lastname</label>
+              <input type="text" id="fullname" name="fullname" />
+              <small>Only enter your first name and last name, middle name is not necessary.</small>
+              <span id="fullnameError" class="error"></span>
   
-        <!-- Work/Activity Title Field -->
-        <div class="form-group">
-			<p class="topivdeTnL">Activity Details</p>
-			<div class="form-group">
-          <label for="workTitle" class="topivde">Work/Activity Title</label>
-          <input type="text" id="workTitle" name="workTitle" />
-         <small>Required.</small>
-        <div><p id="workTitleerror" class="error"></p></div></div>
-  
-        <div class="form-group">
-          <label for="activityType" class="topivde">Type of Work/Activity</label>
-          <select id="activityType" name="activityType">
-            <option value="" disabled selected>Select an option</option>
-            <option value="Course">Course</option>
-            <option value="Activity">Activity</option>
-            <option value="Work">Work</option>
-            <option value="Research">Research</option>
-            <option value="Sports">Sports</option>
-            <option value="Competition">Competition</option>
-            <option value="Computer Science">Computer Science</option>
-          </select>
-        <small>Required.</small>
-        <div><p id="activityTypeerror" class="error"></p></div> 
-		</div></div>
-  
-        <!-- Academic Year Field -->
-        <div class="form-group">
-			
-		<p class="topivdeTnL">Time and Location</p>
-			<div class="form-group">
-          <label for="academicYear" class="topivde6">Academic Year</label>
-          <select id="academicYear" name="academicYear">
-            <option value="" disabled selected>Select an option</option>
-            <option value="2561">2561</option>
-            <option value="2562">2562</option>
-            <option value="2563">2563</option>
-            <option value="2564">2564</option>
-            <option value="2565">2565</option>
-            <option value="2566">2566</option>
-            <option value="2567">2567</option>
-            <option value="2568">2568</option>
-            <option value="2569">2569</option>
-          </select>
-        <small>Required.</small>
-				<div><p id="academicYearerror" class="error"></p></div> 
-        <!-- Semester Field -->
-          <label for="semester" class="topivde7">Semester</label>
-          <select id="semester" name="semester">
-            <option value="" disabled selected>Select an option</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="Summer">Summer</option>
-          </select>
-				<small>Required.</small>
-        <div><p id="semestererror" class="error"></p></div>  </div> 
-        <!-- Start Date/Time Field -->
-        <div class="form-group">
-          <label for="startDate" class="topivde8">Start Date/Time</label>
-          <input type="datetime-local" id="startDate" name="startDate" />
-        <small>Required.</small>
-        <div><p id="startDateerror" class="error"></p></div>  
-        <!-- End Date/Time Field -->
-          <label for="endDate" class="topivde9">End Date/Time</label>
-          <input type="datetime-local" id="endDate" name="endDate" />
-        <small>Required.</small>
-			<div>
-			<p id="endDateerror" class="error"></p></div> </div>
-        <!-- Location Field -->
-        <div class="form-group">
-          <label for="location" class="topivde10">Location</label>
-          <input type="text" id="location" name="location" />
-			<small>Required.</small>
-			<div><p id="locationerror" class="error"></p></div>
-        </div>
-			
-         </div> 
-        <!-- Description Field -->
-        <div class="form-group">
-          <label for="description" class="sada">Description</label>
-          <textarea id="description" name="description" rows="4"></textarea>
-			<small>Required.</small>
-			<div><p id="descriptionerror" class="error"></p></div> 
-        </div>
-        
-		  
-		  
-		  
-		  
-		  
-        <!-- Submit Button -->
-        <div class="form-group02">
-          <input type="submit" value="Submit" />
-        
-        <button type="button" onclick="clearForm()">Clear Form</button>
-			</div>
-      </form>
-    </div>
-	<div class="recoded">
-		<h1 class="headssds">Activity Record</h1>
-	<div id="outputContainer">
-    </div>
-		</div>
-    
-    <!-- Overlay and Modal -->
-    <div id="overlay"></div>
-    <div id="confirmModal">
-		<div class="med"> 
-		<img src="Media/edit.png" class="sfsf">
-      <p class="marc">make a record</p>
-			<div class="cdsl">  
-      <button onclick="confirmAction()" id="yesbot">Yes</button>
-      <button onclick="cancelAction()" id="nobot">No</button></div>
-			</div>
-    </div>
+            <!-- Student ID Field -->
+              <label for="studentID" class="topivde2">Student ID</label>
+              <input type="text" id="studentID" name="studentID" />
+              <small>Please enter your 10-digit student ID.</small>
+              <span id="studentIDError" class="error"></span>
+		          <div>
+                <p id="yeyydas"> Your School Year is
+                  <span id="Myear"></span>
+                </p>
+              </div>
+            </div>
 
+            <!-- University Email Field -->
+            <div class="form-group">
+              <label for="email" class="topivde3">University Email</label>
+              <input type="email" id="email" name="email" />
+              <small>Please provide your university email in the format "xxx.yyy@dome.tu.ac.th".</small>
+              <span id="emailError" class="error"></span>
+            </div>
+          </div>
+  
+          <!-- Work/Activity Title Field -->
+          <div class="form-group">
+			      <p class="topivdeTnL">Activity Details</p>
+			      <div class="form-group">
+              <label for="workTitle" class="topivde">Work/Activity Title</label>
+              <input type="text" id="workTitle" name="workTitle" />
+              <small>Required.</small>
+              <div>
+                <p id="workTitleerror" class="error"></p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="activityType" class="topivde">Type of Work/Activity</label>
+              <select id="activityType" name="activityType">
+                <option value="" disabled selected>Select an option</option>
+                <option value="Course">Course</option>
+                <option value="Activity">Activity</option>
+                <option value="Work">Work</option>
+                <option value="Research">Research</option>
+                <option value="Sports">Sports</option>
+                <option value="Competition">Competition</option>
+                <option value="Computer Science">Computer Science</option>
+              </select>
+              <small>Required.</small>
+              <div>
+                <p id="activityTypeerror" class="error"></p>
+              </div> 
+		        </div>
+          </div>
+  
+          <!-- Academic Year Field -->
+          <div class="form-group">
+			      <p class="topivdeTnL">Time and Location</p>
+			      <div class="form-group">
+              <label for="academicYear" class="topivde6">Academic Year</label>
+              <select id="academicYear" name="academicYear">
+                <option value="" disabled selected>Select an option</option>
+                <option value="2561">2561</option>
+                <option value="2562">2562</option>
+                <option value="2563">2563</option>
+                <option value="2564">2564</option>
+                <option value="2565">2565</option>
+                <option value="2566">2566</option>
+                <option value="2567">2567</option>
+                <option value="2568">2568</option>
+                <option value="2569">2569</option>
+              </select>
+              <small>Required.</small>
+				      <div>
+                <p id="academicYearerror" class="error"></p>
+              </div> 
 
-    <div id="customAlert" class="modal-overlay">
-      <div class="modal-content">
-		  <img src="Media/cancel.png" class="sfsf">
-        <p class="marc">Cannot submit please check your fill</p>
-        <button onclick="hideCustomAlert()" id="okbot">OK</button>
+              <!-- Semester Field -->
+              <label for="semester" class="topivde7">Semester</label>
+              <select id="semester" name="semester">
+                <option value="" disabled selected>Select an option</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="Summer">Summer</option>
+              </select>
+				      <small>Required.</small>
+              <div>
+                <p id="semestererror" class="error"></p>
+              </div>  
+            </div>
+
+            <!-- Start Date/Time Field -->
+            <div class="form-group">
+              <label for="startDate" class="topivde8">Start Date/Time</label>
+              <input type="datetime-local" id="startDate" name="startDate" />
+              <small>Required.</small>
+              <div>
+                <p id="startDateerror" class="error"></p>
+              </div>  
+
+            <!-- End Date/Time Field -->
+              <label for="endDate" class="topivde9">End Date/Time</label>
+              <input type="datetime-local" id="endDate" name="endDate" />
+              <small>Required.</small>
+			        <div>
+			          <p id="endDateerror" class="error"></p>
+              </div> 
+            </div>
+
+            <!-- Location Field -->
+            <div class="form-group">
+              <label for="location" class="topivde10">Location</label>
+              <input type="text" id="location" name="location" />
+			        <small>Required.</small>
+			        <div>
+                <p id="locationerror" class="error"></p>
+              </div>
+            </div>
+          </div> 
+
+          <!-- Description Field -->
+          <div class="form-group">
+            <label for="description" class="sada">Description</label>
+            <textarea id="description" name="description" rows="4"></textarea>
+			      <small>Required.</small>
+			      <div>
+              <p id="descriptionerror" class="error"></p>
+            </div> 
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-group02">
+            <input type="submit" value="Submit" />
+            <button type="button" onclick="clearForm()">Clear Form</button>
+			    </div>
+        </form>
       </div>
-    </div>
+	    <div class="recoded">
+		    <h1 class="headssds">Activity Record</h1>
+	      <div id="outputContainer">
+        </div>
+		  </div>
     
+      <!-- Overlay and Modal -->
+      <div id="overlay"></div>
+      <div id="confirmModal">
+		    <div class="med"> 
+		      <img src="Media/edit.png" class="sfsf">
+          <p class="marc">make a record</p>
+			    <div class="cdsl">  
+            <button onclick="confirmAction()" id="yesbot">Yes</button>
+            <button onclick="cancelAction()" id="nobot">No</button>
+          </div>
+			  </div>
+      </div>
+      <div id="customAlert" class="modal-overlay">
+        <div class="modal-content">
+		      <img src="Media/cancel.png" class="sfsf">
+          <p class="marc">Cannot submit please check your fill</p>
+          <button onclick="hideCustomAlert()" id="okbot">OK</button>
+        </div>
+      </div>
+	  </div>
 	</div>
-	</div>
-		
-		
-		
-		
-		
+
     <!-- JavaScript -->
     <script src="JavaScript/scriptform.js"></script>
     <script>

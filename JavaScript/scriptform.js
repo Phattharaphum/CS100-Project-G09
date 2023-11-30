@@ -15,6 +15,7 @@ function validateName() {
   return true;
   
 }
+
 // Function to validate Student ID
 function validateStudentID() {
   const studentIDInput = document.getElementById("studentID");
@@ -39,6 +40,7 @@ function validateStudentID() {
   }
   return true;
 }
+
 // Function to validate University Email
 function validateEmail() {
   const emailInput = document.getElementById("email");
@@ -56,6 +58,7 @@ function validateEmail() {
   }
   return true;
 }
+
 function TitleCheck(){
   const Input = document.getElementById("workTitle");
   const TitlePattern = /^[a-zA-Z ]{3,}$/;
@@ -88,6 +91,7 @@ function ActivityCheck(){
   }
   return true;
 }
+
 function AcademicYearCheck(){
   const Input = document.getElementById("academicYear");
   const errorElement = document.getElementById("academicYearerror");
@@ -101,6 +105,7 @@ function AcademicYearCheck(){
   }
   return true;
 }
+
 function semesterCheck(){
   const Input = document.getElementById("semester");
   const errorElement = document.getElementById("semestererror");
@@ -114,6 +119,7 @@ function semesterCheck(){
   }
   return true;
 }
+
 function startDateCheck(){
   const Input = document.getElementById("startDate");
   const errorElement = document.getElementById("startDateerror");
@@ -127,6 +133,7 @@ function startDateCheck(){
   }
   return true;
 }
+
 function endDateCheck(){
   const Input = document.getElementById("endDate");
   const errorElement = document.getElementById("endDateerror");
@@ -150,6 +157,7 @@ function endDateCheck(){
 
   return true;
 }
+
 function locationCheck(){
   const Input = document.getElementById("location");
   const errorElement = document.getElementById("locationerror");
@@ -176,6 +184,7 @@ function descriptionCheck(){
   }
   return true;
 } 
+
 function Output(){
   const myDiv = document.createElement("div");
   const Name = document.createElement("p");
@@ -189,8 +198,6 @@ function Output(){
   const DateE = document.createElement("p");
   const Loca = document.createElement("p");
   const Des = document.createElement("p");
-
-
 
   const fullnameInput = document.getElementById("fullname").value;
   const ActiInput = document.getElementById("workTitle").value;
@@ -217,7 +224,6 @@ function Output(){
   DateE.textContent = "End date and time : " +DateEInput;
   Loca.textContent = "Location : " +LocaInput;
   Des.textContent = "Description : " +DesInput;
-
 
   myDiv.className="TestRec01";
   myDiv.appendChild(Acti);
@@ -249,6 +255,7 @@ function Output(){
     locationCheck();
     descriptionCheck();
   } 
+  
 async function submitForm(event) {
   event.preventDefault();
 
