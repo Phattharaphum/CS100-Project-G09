@@ -20,6 +20,35 @@ function validateName() {
   return true;
   
 }
+const facultyValues = [0,1, 2, 3, 4, 5, 3,7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 26, 27, 64];
+const facultyTexts = [
+    "สำนักบัณฑิตอาสาสมัคร",
+    "คณะนิติศาสตร์",
+    "คณะพาณิชยศาสตร์และการบัญชี",
+    "คณะรัฐศาสตร์",
+    "คณะเศรษฐศาสตร์",
+    "คณะสังคมสงเคราะห์ศาสตร์",
+    "คณะศิลปศาสตร์",
+    "คณะวารสารศาสตร์และสื่อสารมวลชน",
+    "คณะสังคมวิทยาและมานุษยวิทยา",
+    "คณะวิทยาศาสตร์และเทคโนโลยี",
+    "คณะวิศวกรรมศาสตร์",
+    "คณะแพทยศาสตร์",
+    "คณะสหเวชศาสตร์",
+    "คณะทันตแพทยศาสตร์",
+    "คณะพยาบาลศาสตร์",
+    "คณะศิลปกรรมศาสตร์",
+    "คณะสถาปัตยกรรมศาสตร์และการผังเมือง",
+    "คณะสาธารณสุขศาสตร์",
+    "คณะเภสัชศาสตร์",
+    "สถาบันภาษา",
+    "สถาบันเทคโนโลยีนานาชาติสิรินธร",
+    "วิทยาลัยนวัตกรรม",
+    "วิทยาลัยสหวิทยาการ",
+    "โครงการไทยศึกษา",
+    "วิทยาลัยนานาชาติปรีดี พนมยงค์",
+    "โครงการนิติเศรษฐศาสตร์การค้าระหว่างประเทศ"
+];
 
 // Function to validate Student ID
 function validateStudentID() {
@@ -32,15 +61,31 @@ function validateStudentID() {
   console.log(A);
   console.log(C);
   Myears = Math.floor(C);
-  console.log(Myears);
+
+
+  let tuFaci = (parseInt(studentIDInput.value[2]) * 10) + (parseInt(studentIDInput.value[3]) * 1);
+
+  
+  let Faci = ""; // Initialize Faci outside the loop
+  
+  for (let i = 0; i < facultyTexts.length; i++) {
+      if (tuFaci === facultyValues[i]) {
+          Faci = facultyTexts[i];
+          break; // Exit the loop once a match is found
+      }
+  }
+  
+
   if (!studentIDPattern.test(studentIDInput.value)) {
     errorElement.textContent = "Please enter a 10-digit Student ID.";
     studentIDInput.classList.add("highlight");
     document.getElementById("Myear").innerHTML="";
+    document.getElementById("MyFaci").innerHTML="";
     return false;
   } else {
     errorElement.textContent = ""; // Clear the error message when valid
     document.getElementById("Myear").innerHTML="25"+Myears;
+    document.getElementById("MyFaci").innerHTML=Faci;
     studentIDInput.classList.remove("highlight");
   }
   return true;
@@ -66,7 +111,7 @@ function validateEmail() {
 
 function TitleCheck(){
   const Input = document.getElementById("workTitle");
-  const TitlePattern = /^[a-zA-Z ]{3,}$/;
+  const TitlePattern = /^[a-zA-Zก-๙ ]{3,}$/;
   const errorElement = document.getElementById("workTitleerror");
   if (Input.value == "") {
       errorElement.innerHTML = "Required.";
@@ -141,7 +186,17 @@ function AcademicYearCheck(){
   } else {
       errorElement.innerHTML = "";
       Input.classList.remove("highlight");
+      if(parseInt(Input.value)<(parseInt(Myears)+2500)){
+        Input.classList.add("highlight");
+        errorElement.innerHTML = "Scholastic tenure must extend beyond your academic calendar.";
+        return false;
+      }
+      else{
+        errorElement.innerHTML = "";
+        Input.classList.remove("highlight");
+      }
   }
+
   return true;
 }
 
@@ -224,6 +279,14 @@ function descriptionCheck(){
   return true;
 } 
 
+
+
+
+
+
+
+
+
 function Output(){
   const myDiv = document.createElement("div");
   const Name = document.createElement("p");
@@ -305,26 +368,30 @@ async function submitForm(event) {
       return;
     }
 
+    showConfirm();
 
-    const formData = new FormData(event.target);
-    const data = {
-    first_name: formData.get("fullname").split(" ")[0],
-    last_name: formData.get("fullname").split(" ")[1],
-    student_id: parseInt(formData.get("studentID")),
-    email: formData.get("email"),
-    title: formData.get("workTitle"),
-    type_of_work_id: parseInt(formData.get("activityType")),
-    academic_year: parseInt(formData.get("academicYear")) - 543,
-    semester: parseInt(formData.get("semester")),
-    start_date: formData.get("startDate"),
-    end_date: formData.get("endDate"),
-    location: formData.get("location"),
-    description: formData.get("description")
-  };
+  }
 
-  console.log(data);
-  showConfirm();
-  try {
+
+  async function senndatatobe(){
+      const formData = new FormData(event.target);
+      const data = {
+      first_name: formData.get("fullname").split(" ")[0],
+      last_name: formData.get("fullname").split(" ")[1],
+      student_id: parseInt(formData.get("studentID")),
+      email: formData.get("email"),
+      title: formData.get("workTitle"),
+      type_of_work_id: parseInt(formData.get("activityType")),
+      academic_year: parseInt(formData.get("academicYear")) - 543,
+      semester: parseInt(formData.get("semester")),
+      start_date: formData.get("startDate"),
+      end_date: formData.get("endDate"),
+      location: formData.get("location"),
+      description: formData.get("description")
+      };
+
+      console.log(data);
+      try {
     // Send data to the backend using POST request
     const response = await fetch(`http://${window.location.hostname}:${port}/record`, {
       method: "POST",
@@ -356,7 +423,8 @@ async function submitForm(event) {
   } catch (error) {
     console.error("An error occurred while submitting form data:", error);
   }  
-} 
+}
+
   // Event listener for form submission
   document.getElementById("myForm").addEventListener("submit", submitForm);
   

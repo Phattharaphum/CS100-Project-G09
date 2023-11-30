@@ -42,10 +42,10 @@ app.post('/record', (req, res) => {
     }
   
     // Validate that the start and end dates provided fall within the academic calendar
-    const dateValidationError = validateDates(data.academic_year, data.semester, data.start_date, data.end_date);
+    /*const dateValidationError = validateDates(data.academic_year, data.semester, data.start_date, data.end_date);   //Start
     if (dateValidationError) {
       return res.status(400).json({message: dateValidationError});
-    }
+    }*/                                                                                                               //End
 
     // Structure the record for saving
     const record = {
@@ -80,7 +80,7 @@ app.post('/record', (req, res) => {
 
 // Function to validate provided start and end dates
 // It checks if the dates are within the bounds of the academic calendar
-const validateDates = (academicYear, semester, startDate, endDate) => {
+/*const validateDates = (academicYear, semester, startDate, endDate) => {         //Start 
     try {
       const calendarData = fs.readFileSync('databases/calendar.json');
       const calendars = JSON.parse(calendarData);
@@ -109,7 +109,7 @@ const validateDates = (academicYear, semester, startDate, endDate) => {
       console.error('Error reading or parsing calendar.json:', err);
       return 'Internal server error';
     }
-};
+};*/                                                                              //End
 
 // GET endpoint to retrieve activity types from 'activityType.json' file
 app.get('/getActivityType', (req, res) => {

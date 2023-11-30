@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Our Activities</title>
-	<link rel="stylesheet" href="../CSS/activity-mb.css">
-	<link rel="stylesheet" href="../CSS/activity-tl.css">
+	<!--<link rel="stylesheet" href="../CSS/activity-mb.css">
+	<link rel="stylesheet" href="../CSS/activity-tl.css"> -->
   <link rel="stylesheet" href="../CSS/activity-pc.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -64,6 +65,9 @@
                 <p id="yeyydas"> Your School Year is
                   <span id="Myear"></span>
                 </p>
+                <p id="yeyydas"> Your Faci is
+                  <span id="MyFaci"></span>
+                </p>
               </div>
             </div>
 
@@ -91,6 +95,13 @@
               <label for="activityType" class="topivde">Type of Work/Activity</label>
               <select id="activityType" name="activityType">
                 <option value="" disabled selected>Select an option</option>
+				         	<option value="Course">Course</option>
+							<option value="Activity">Activity</option>
+							<option value="Work">Work</option>
+							<option value="Research">Research</option>
+							<option value="Sports">Sports</option>
+							<option value="Competition">Competition</option>
+							<option value="Computer Science">Computer Science</option>
               </select>
               <small>Required.</small>
               <div>
@@ -230,8 +241,9 @@
       document.getElementById("confirmModal").style.display = "block";
   }
   function confirmAction() {
-	  Output();
-      hideConfirm();
+    Output();
+    senndatatobe();
+    hideConfirm();
 	  clearForm();
   }
   function cancelAction() {
