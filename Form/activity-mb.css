@@ -1,11 +1,11 @@
-@media screen and (min-width: 1200px)
+@media screen and (max-width: 767px)
 {
 body {
     font-family: Arial, sans-serif;
   }
 
  body {
-	background-image:url("cssMedia/Bg01.jpg");
+	background-image:url("Media/Bg01.jpg");
 	width: 100%;
 	height: 100%;
 	margin-top: 0;
@@ -16,12 +16,11 @@ body {
   /* Styling for the form container */
   .form-container {
 	    margin: auto;
-  max-width:1200px;
-  border-radius: 50px;
+  border-radius: 30px;
   padding: 10px;
   background-color: #fff;
   height: 100%;
-  background-image: url("cssMedia/Bg01Br.jpg");
+  background-image: url("Media/Bg01Br.jpg");
 background-size:cover;
 background-attachment:fixed;
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -30,7 +29,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	  
 	  
 	  
-    max-width: 700px;
+    max-width: 280px;
     margin: 20px auto;
     padding: 20px;
   }
@@ -43,9 +42,10 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   
   /* Styling for each form group */
   .form-group {
-    margin: 20px;
+    margin: 5px;
+	  margin-top: 10px;
 	padding: 20px;
-	 border-radius: 15px;
+	 border-radius: 30px;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   
@@ -67,7 +67,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 4px;
     box-sizing: border-box;
 	 font-family: Poppins;
-	  font-size: 12pt;
+	  font-size: 4pt;
 	  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   }
   
@@ -87,13 +87,13 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     color: white;
     padding: 10px 15px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
   }
   
   /* Styling for small helper text */
   .form-group small {
-    font-size: 12px;
+    font-size: 7px;
     color: black;
 	  font-family: Poppins;
   }
@@ -113,6 +113,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	font-family: Poppins;
 	  font-weight: 600;
 	background-color: #9B342F;
+	  font-size: 8pt;
   }
  
 
@@ -177,24 +178,28 @@ div.mhead {
 	margin-left: 1em;
 	margin-top: 0em;
 	flex-direction: column;
-	
+	transform: scale(0.3);
+	margin-top:-140px; 
+	margin-left: -40px;
 }
 div.nev1 {
-	display: flex;
     color:white ;
-    margin-left: 40em;
-    margin-top: 4em;
-	flex-direction: row;
+    margin-left: 10em;
+    margin-top: 2em;
+	display: inline-flex;
+	flex-direction: column;
 	font-weight: 600;
-	height: 50px;
 }
 a.nev2 {
     font-family:Poppins ;
     color: white;
-    margin-right: 4em;
-    font-size: 20pt;
+    margin-right: 0em;
+    font-size: 12pt;
 	background-color: #F87862;
 	border-radius: 10px;
+	margin-top: 10px;
+	margin-left: 32px;
+	text-align: center;
 	padding: 6px 25px 6px 25px;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
@@ -244,10 +249,13 @@ p.passp {
 .nev3 {
 	font-family:Poppins ;
     color: white;
-    margin-right: 4em;
-    font-size: 20pt;
+    margin-right: 0em;
+    font-size: 12pt;
+	margin-top: 10px;
 	background-color: #B24338;
 	border-radius: 10px;
+	margin-left: 32px;
+	text-align: center;
 	padding: 6px 25px 6px 25px;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
@@ -298,7 +306,7 @@ a.nev3:hover {
 
 .headssds {
 	font-family: Poppins;
-	font-size: 40pt;
+	font-size: 20pt;
 	text-align: center;
 	margin: 0;
 	font-weight: 900;
@@ -308,13 +316,13 @@ a.nev3:hover {
 
 .topivde {
 		font-family: Poppins;
-	font-size: 15pt;
+	font-size: 8pt;
 	text-align: left;
 	margin: auto;
 	font-weight: 600;
 	color: #1A1135;
 	background-color: white;
-	width: 50%;
+	width: 80%;
 	padding: 2px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -331,22 +339,23 @@ a.nev3:hover {
 
 #yeyydas {
 	background-color: white;
-	width: 220px;
+	width: 110px;
 	font-family: Poppins;
-	padding: 10px;
-	border-radius: 10px;
+	padding: 8px;
+	border-radius: 8px;
 	margin-left: 20px;
+	font-size: 5pt;
 }
 
 .topivde2 {
 		font-family: Poppins;
-	font-size: 15pt;
+	font-size: 8pt;
 	text-align: left;
 	margin: auto;
 	font-weight: 600;
 	color: #1A1135;
 	background-color: white;
-	width: 21%;
+	width: 36%;
 	padding: 2px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -357,13 +366,13 @@ a.nev3:hover {
 
 .topivde3 {
 		font-family: Poppins;
-	font-size: 15pt;
+	font-size: 8pt;
 	text-align: left;
 	margin: auto;
 	font-weight: 600;
 	color: #1A1135;
 	background-color: white;
-	width: 32%;
+	width: 52%;
 	padding: 2px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -374,7 +383,7 @@ a.nev3:hover {
 
 .topivdeTnL {
 		font-family: Poppins;
-	font-size: 20pt;
+	font-size: 12pt;
 	text-align: left;
 	margin: auto;
 	font-weight: 900;
@@ -384,15 +393,32 @@ a.nev3:hover {
 	padding: 10px;
 	margin: 15px;
 	margin-left: 0;
-	border-radius: 15px;
+	border-radius: 10px;
 }
 
 .topivde6 {
 	font-family: Poppins;
-	font-size: 15pt;
+	font-size: 8pt;
 	text-align: left;
 	margin: auto;
 	font-weight: 300;
+	color: #1A1135;
+	background-color: white;
+	width: 50%;
+	padding: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 10px;
+	margin-left: 0;
+	border-radius: 5px;
+}
+
+.topivde7 {
+		font-family: Poppins;
+	font-size: 8pt;
+	text-align: left;
+	margin: auto;
+	font-weight: 600;
 	color: #1A1135;
 	background-color: white;
 	width: 30%;
@@ -404,32 +430,16 @@ a.nev3:hover {
 	border-radius: 5px;
 }
 
-.topivde7 {
-		font-family: Poppins;
-	font-size: 15pt;
-	text-align: left;
-	margin: auto;
-	font-weight: 600;
-	color: #1A1135;
-	background-color: white;
-	width: 20%;
-	padding: 2px;
-	padding-left: 20px;
-	padding-right: 20px;
-	margin: 10px;
-	margin-left: 0;
-	border-radius: 5px;
-}
-
 .topivde8 {
 			font-family: Poppins;
-	font-size: 15pt;
+	font-size: 8pt;
 	text-align: left;
 	margin: auto;
 	font-weight: 600;
 	color: #1A1135;
+
 	background-color: white;
-	width: 32%;
+	width: 50%;
 	padding: 2px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -439,14 +449,14 @@ a.nev3:hover {
 }
 
 .topivde9 {
-	font-family: Poppins;
-	font-size: 15pt;
+				font-family: Poppins;
+	font-size: 8pt;
 	text-align: left;
 	margin: auto;
 	font-weight: 600;
 	color: #1A1135;
 	background-color: white;
-	width: 32%;
+	width: 50%;
 	padding: 2px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -456,14 +466,14 @@ a.nev3:hover {
 }
 
 .topivde10 {
-			font-family: Poppins;
-	font-size: 15pt;
+	font-family: Poppins;
+	font-size: 8pt;
 	text-align: left;
 	margin: auto;
 	font-weight: 600;
 	color: #1A1135;
 	background-color: white;
-	width: 17%;
+	width: 25%;
 	padding: 2px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -474,7 +484,7 @@ a.nev3:hover {
 
 .sada {
 			font-family: Poppins;
-	font-size: 20pt;
+	font-size: 12pt;
 	text-align: left;
 	margin: auto;
 	font-weight: 900;
@@ -488,11 +498,10 @@ a.nev3:hover {
 }
 
 .form-group02 {
-	margin: 20px;
-	padding: 20px;
+	    margin-left: 65px;
+	padding: 10px;
 	 border-radius: 15px;
 	display: inline-flex;
-	margin: auto;
 	flex-direction: column;
 	/*box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;*/
 }
@@ -500,13 +509,13 @@ a.nev3:hover {
     background-color: #4caf50;
     color: white;
 	  font-family: Poppins;
-	  font-size: 20pt;
+	  font-size: 12pt;
 	  font-weight: 600;
-    padding: 15px 20px;
+    padding: 10px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-	 margin-left: 250px;
+	 margin-left: 0px;
 	  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   }
   .form-group02 button[type="button"] {
@@ -514,12 +523,14 @@ a.nev3:hover {
     color: white;
 	font-family: Poppins;
     padding: 10px 15px;
+	  font-size: 8pt;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 	  margin-top: 10px;
-	  margin-left: 250px;
+	  margin-left: 0px;
 	  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+	  width: 120px;
   }
 .recoded {
 	
@@ -529,7 +540,7 @@ a.nev3:hover {
   padding: 10px;
   background-color: #fff;
   height: 100%;
-  background-image: url("cssMedia/Bg01Br.jpg");
+  background-image: url("Media/Bg01Br.jpg");
 background-size:cover;
 background-attachment:fixed;
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -538,7 +549,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	  
 	  
 	  
-    max-width: 700px;
+    max-width: 500px;
     margin: 20px auto;
 	margin-top:80px; 
     padding: 20px;
@@ -550,14 +561,14 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	 border-radius: 15px;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	font-family: Poppins;
-	font-size: 20pt;
+	font-size: 10pt;
 	color: white;
 	line-height: 15px;
 	background-color: rgba(43, 30, 85, 0.6);
 }
 
 .rechead {
-	font-size: 35pt;
+	font-size: 20pt;
 	text-align: center;
 	font-weight: 600;
 	background-color: #9B342F;
@@ -576,8 +587,8 @@ b {
   border: 3px solid #7A2020;
 }
 .sfsf {
-	height: 100px;
-	width: 100px;
+	height: 50px;
+	width: 50px;
 }
 
 .med {
@@ -589,7 +600,7 @@ b {
 
 .marc {
 	font-family: Poppins;
-	font-size: 20pt;
+	font-size: 12pt;
 	font-weight: 600;
 }
 
@@ -632,8 +643,8 @@ b {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   background: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
@@ -655,7 +666,7 @@ b {
     padding: 10px;
     cursor: pointer;
 	background-color: #1A1135;
-	font-size: 20pt;
+	font-size: 10pt;
 	font-family: Poppins;
 	font-weight: 600;
 	color: white;
