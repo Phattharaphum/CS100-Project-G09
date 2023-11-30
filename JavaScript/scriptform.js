@@ -113,6 +113,7 @@ async function fetchActivityTypes() {
     return [];
   }
 }
+
 // Function to populate activity types in the select element
 function populateActivityTypes(activityTypes) {
   const activityTypeSelect = document.getElementById("activityType");
@@ -306,7 +307,7 @@ async function submitForm(event) {
 
 
     const formData = new FormData(event.target);
-  const data = {
+    const data = {
     first_name: formData.get("fullname").split(" ")[0],
     last_name: formData.get("fullname").split(" ")[1],
     student_id: parseInt(formData.get("studentID")),
@@ -322,7 +323,7 @@ async function submitForm(event) {
   };
 
   console.log(data);
-
+  showConfirm();
   try {
     // Send data to the backend using POST request
     const response = await fetch(`http://${window.location.hostname}:${port}/record`, {
@@ -354,11 +355,8 @@ async function submitForm(event) {
     }
   } catch (error) {
     console.error("An error occurred while submitting form data:", error);
-  }
-	showConfirm();
-    
+  }  
 } 
-
   // Event listener for form submission
   document.getElementById("myForm").addEventListener("submit", submitForm);
   
@@ -374,4 +372,3 @@ async function submitForm(event) {
   document.getElementById("endDate").addEventListener("input", endDateCheck);
   document.getElementById("location").addEventListener("input", locationCheck);
   document.getElementById("description").addEventListener("input", descriptionCheck);
-  //document.getElementById("nameTitle").addEventListener("input", nameTitleCheck);
