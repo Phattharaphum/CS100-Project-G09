@@ -360,12 +360,6 @@ function Output(){
 
   Actyop.className="asddd";
 
-
-
-
-
-
-
   myDiv.className="TestRec01";
   myDiv.appendChild(Acti);
   myDiv.appendChild(Name);
@@ -404,7 +398,7 @@ async function submitForm(event) {
   event.preventDefault();
 
     // Validate form inputs before submission
-    if (!validateName() || !validateStudentID() || !validateEmail() || !TitleCheck() || !ActivityCheck() || !AcademicYearCheck() ||
+  if (!validateName() || !validateStudentID() || !validateEmail() || !TitleCheck() || !ActivityCheck() || !AcademicYearCheck() ||
 !semesterCheck() || !startDateCheck() || !endDateCheck()|| !locationCheck()|| !descriptionCheck()) {
       showCustomAlert();
       return;
