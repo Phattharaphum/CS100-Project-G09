@@ -1,4 +1,4 @@
-@media screen and (min-width: 1200px)
+@media screen and (min-width: 1025px)
 {
 body {
     font-family: Arial, sans-serif;
@@ -553,10 +553,11 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	 border-radius: 15px;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	font-family: Kanit;
+	font-weight: 500;
 	font-size: 20pt;
-	color: white;
-	line-height: 15px;
-	background-color: rgba(43, 30, 85, 0.6);
+	color: black;
+	line-height: 12px;
+	background-color: white;
 }
 
 .rechead {
@@ -568,6 +569,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	border-radius: 25px;
 	margin: auto;
 	line-height: 2em;
+	color: white;
 }
 b {
 	font-weight: 600;
@@ -666,7 +668,7 @@ b {
 	width: 100px;
 	border-radius: 15px;
 }
-}
+
 #yeyydass {
 		background-color: white;
 	width: 450px;
@@ -683,4 +685,9 @@ b {
 	padding: 2px;
 	color: white;
 	font-weight: 600;
+}
+
+.asddd {
+	margin-top: 50px;
+}
 }

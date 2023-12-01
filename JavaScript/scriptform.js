@@ -318,6 +318,7 @@ function Output(){
   const Facili = document.createElement("p");
   const Email = document.createElement("p");
   const Actyp = document.createElement("p");
+  const Actyop = document.createElement("p");
   const Acad = document.createElement("p");
   const Semis = document.createElement("p");
   const DataS = document.createElement("p");
@@ -341,11 +342,14 @@ function Output(){
   Acti.textContent=ActiInput;
   Acti.className="rechead";
 
+
+
   Name.textContent = "Name : " + fullnameInput;
   ID.textContent = "Student ID : " + IDInput;
   Year.textContent = "School year : "+"25" + Myears;
   Facili.textContent = "Faculty  : " + DesInputIn;
   Email.textContent = "Email : " + EmailInput;
+  Actyop.textContent = "Activity Title : " +ActiInput;
   Actyp.textContent = "Activity Type : " +ActypInput;
   Acad.textContent = "Academic Year : " +AcadInput;
   Semis.textContent = "Semeter : " +SemisInput;
@@ -354,6 +358,14 @@ function Output(){
   Loca.textContent = "Location : " +LocaInput;
   Des.textContent = "Description : " +DesInput;
 
+  Actyop.className="asddd";
+
+
+
+
+
+
+
   myDiv.className="TestRec01";
   myDiv.appendChild(Acti);
   myDiv.appendChild(Name);
@@ -361,6 +373,7 @@ function Output(){
   myDiv.appendChild(Year);
   myDiv.appendChild(Facili);
   myDiv.appendChild(Email);
+  myDiv.appendChild(Actyop);
   myDiv.appendChild(Actyp);
   myDiv.appendChild(Acad);
   myDiv.appendChild(Semis);
