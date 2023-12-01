@@ -18,8 +18,8 @@ function validateName() {
     fullnameInput.classList.remove("highlight");
   }
   return true;
-  
 }
+
 const facultyValues = [0,1, 2, 3, 4, 5, 3,7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 26, 27, 64];
 const facultyTexts = [
     "สำนักบัณฑิตอาสาสมัคร",
@@ -49,6 +49,7 @@ const facultyTexts = [
     "วิทยาลัยนานาชาติปรีดี พนมยงค์",
     "โครงการนิติเศรษฐศาสตร์การค้าระหว่างประเทศ"
 ];
+
 let Facul;
 // Function to validate Student ID
 function validateStudentID() {
@@ -75,6 +76,7 @@ function validateStudentID() {
       }
       Faci ="Your ID is not correct"
   }
+
   Facul=Faci;
 
   if (!studentIDPattern.test(studentIDInput.value)) {
@@ -141,8 +143,7 @@ function TitleCheck(){
   } else if(!TitlePattern.test(Input.value)){
       errorElement.innerHTML = "Title must have more than 2 letter";
       Input.classList.add("highlight");
-  }
-      else {
+  } else {
         Input.classList.remove("highlight");
       errorElement.innerHTML = "";
   }
@@ -419,7 +420,7 @@ async function submitForm(event) {
       };
 
       console.log(data);
-      try {
+    try {
     // Send data to the backend using POST request
     const response = await fetch(`http://${window.location.hostname}:${port}/record`, {
       method: "POST",
@@ -448,10 +449,11 @@ async function submitForm(event) {
       // Display error message
       alert("Failed to submit form data. Please try again.");
     }
-  } catch (error) {
-    console.error("An error occurred while submitting form data:", error);
-  }  
-}
+    } 
+    catch (error) {
+      console.error("An error occurred while submitting form data:", error);
+    }  
+  }
 
   // Event listener for form submission
   document.getElementById("myForm").addEventListener("submit", submitForm);
