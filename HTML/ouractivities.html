@@ -62,7 +62,7 @@
               <small>Please enter your 10-digit student ID.</small>
               <span id="studentIDError" class="error"></span>
 		          <div>
-                <p id="yeyydas"> Your School Year is
+                <p id="yeyydas"> Your scholastic year is
                   <span id="Myear"></span>
                 </p>
                 <p id="yeyydass"> Your Faculty is
@@ -95,13 +95,13 @@
               <label for="activityType" class="topivde">Type of Work/Activity</label>
               <select id="activityType" name="activityType">
                 <option value="" disabled selected>Select an option</option>
-				         	<option value="Course">Course</option>
+				     <!--    	<option value="Course">Course</option>
 							<option value="Activity">Activity</option>
 							<option value="Work">Work</option>
 							<option value="Research">Research</option>
 							<option value="Sports">Sports</option>
 							<option value="Competition">Competition</option>
-							<option value="Computer Science">Computer Science</option>
+							<option value="Computer Science">Computer Science</option> -->
               </select>
               <small>Required.</small>
               <div>
@@ -218,7 +218,7 @@
       <div id="confirmModal">
 		    <div class="med"> 
 		      <img src="../Media/submit.png" class="sfsf">
-          <p class="marc">make a record</p>
+          <p class="marc">Establish a record</p>
 			    <div class="cdsl">  
             <button onclick="confirmAction()" id="yesbot">Yes</button>
             <button onclick="cancelAction()" id="nobot">No</button>
@@ -228,7 +228,7 @@
       <div id="customAlert" class="modal-overlay">
         <div class="modal-content">
 		      <img src="../Media/cannotsubmit.png" class="sfsf">
-          <p class="marc">Cannot submit please check your fill</p>
+          <p class="marc">Cannot submit, please check your fill</p>
           <button onclick="hideCustomAlert()" id="okbot">OK</button>
         </div>
       </div>
@@ -239,7 +239,7 @@
     <script src="../JavaScript/scriptform.js"></script>
     <script>
       function clbt(){
-        alert("This form has been cleared.");
+        alert("This form has been cleared");
         clearForm();
       }
       function clearForm() {

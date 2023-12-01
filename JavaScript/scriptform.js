@@ -187,7 +187,7 @@ function populateActivityTypes(activityTypes) {
 
   for (const type of activityTypes) {
     const option = document.createElement("option");
-    option.value = type.id;
+    option.value = type.value;
     option.textContent = type.value;
     activityTypeSelect.appendChild(option);
   }
@@ -301,14 +301,6 @@ function descriptionCheck(){
   return true;
 } 
 
-
-
-
-
-
-
-
-
 function Output(){
   const myDiv = document.createElement("div");
   const Name = document.createElement("p");
@@ -341,8 +333,6 @@ function Output(){
 
   Acti.textContent=ActiInput;
   Acti.className="rechead";
-
-
 
   Name.textContent = "Name : " + fullnameInput;
   ID.textContent = "Student ID : " + IDInput;
@@ -408,8 +398,7 @@ async function submitForm(event) {
 
   }
 
-
-  async function senndatatobe(){
+  async function senndatatobe(event){
       const formData = new FormData(event.target);
       const data = {
       first_name: formData.get("fullname").split(" ")[0],
